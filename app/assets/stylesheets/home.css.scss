@@ -1,3 +1,24 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#header { background-color: white; height: 75px;}
+#poster { background-color: #227788; color: white; padding: 10px 0px 30px 0px; }
+#main { background-color: white; padding: 10px 0px 30px 0px;}
+#footer { background-color: #227788; color: white; padding: 10px 0px; 
+	font-size: 85%; }
+
+.content { width: 800px; text-align: left; 
+	margin-left: auto; margin-right: auto; }
+
+#logo { width: 150px; float: left; }
+#logo-line-1 {font-size: 30px;  font-weight: bold;}
+#logo-line-2 {font-size: 20px;  }
+#navbar {float:right; }
+
+#poster-title { margin-left: -100px; text-align: center;}
+#poster-sub-title {margin-left: 200px; margin-top: -20px; text-align: center;}
+
+.main-section { padding: 10px 0px; }
