@@ -23,7 +23,14 @@
 			<li>Made by Microsoft employees for Microsoft employees</li>
 		</ul>
 
-		Sign up now! <input type="text" /><input type="submit" />
+		<%= form_for(@user = User.new) do |f| %>
+		  <div class="field actions">
+		    Sign up now!
+		    <%= f.text_field :email %>
+		    <%= f.submit %>
+		  </div>
+		<% end %>
+
 	</div>
 </div>
 
