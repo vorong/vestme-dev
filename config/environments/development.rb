@@ -1,4 +1,15 @@
 Gvodev::Application.configure do
+  # UserMailer config
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => "smtp.gmail.com",
+  :port                 => 587,
+  :domain               => 'gvodev.info',
+  :user_name            => 'msft401k',
+  :password             => 'windowsce',
+  :authentication       => 'plain',
+  :enable_starttls_auto => true  }
+  
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -34,14 +45,4 @@ Gvodev::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
-  :port                 => 587,
-  :domain               => 'gvodev.info',
-  :user_name            => 'msft401k',
-  :password             => 'windowsce',
-  :authentication       => 'plain',
-  :enable_starttls_auto => true  }
 end
