@@ -1,33 +1,36 @@
 <div id="header">
 	<div class="content">
 		<div id="logo">
-			<div id="logo-line-1">msft 401k</div>
-			<div id="logo-line-2">by mennen</div>			
+			<div id="logo-line-1">msft401k</div>
+			<div id="logo-line-2">by Vest Me</div>			
 		</div>
 
-		<div id="navbar">our returns | do it yourself | sign up | how it works | vision</div>
+		<div id="navbar">Our Returns | How It Works | What Do I Do | Who We Are | Vision</div>
 
 	</div>
 </div>
 
 <div id="poster">
 	<div class="content">
-		<h1 id="poster-title">Microsoft 401k not doing much?</h1>
-		<h2 id="poster-sub-title">Supercharge it in 5 minutes a month</h2>
+		<h1>Unlock the potential of your Microsoft 401k</h1>
 
-		<p>We provide a better way to invest your 401k with reduced volatility and higher returns</p>
+		<div class="poster-blurb">
 
-		<ul>
-			<li>Personalized for Microsoft 401k</li>
-			<li>Easy to follow monthly rebalance signals</li>
-			<li>Made by Microsoft employees for Microsoft employees</li>
-		</ul>
+		<h3>We provide a better way to invest your 401k with reduced volatility and higher returns</h3>
+
+			=> Personalized for Microsoft 401k<br />
+			=> Easy to follow monthly rebalance signals<br />
+			=> Made by Microsoft employees for Microsoft employees<br />
+			=> It's free!  Just takes 5 minutes per month
+
+		</div>
+
+		<div class="chartbox1">Some initial chart goes here?  Do we actually need a chart here if we have a chart section below?  Maybe we just need a stock image of a person who is super happy because he's maximing the potential of his 401k... :-)</div>
 
 		<%= form_for(@user = User.new) do |f| %>
 		  <div class="field actions">
-		    Sign up now!
-		    <%= f.text_field :email %>
-		    <%= f.submit %>
+		    <%= f.text_field :email, :class => "form-text-field",
+		    :placeholder => "enter email to sign up" %><%= f.submit "Sign Up!", :class => "form-button" %>
 		  </div>
 		<% end %>
 
@@ -37,7 +40,7 @@
 <div id="main">
 	<div class="content">
 		<div class="main-section">
-			<h2>Section 1</h2>
+			<h2>Our Returns</h2>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus placerat augue quis laoreet. Vestibulum ullamcorper est id nunc bibendum laoreet. Maecenas porttitor nisl commodo risus sodales vestibulum. Donec placerat rhoncus rutrum. Vivamus elit massa, posuere ac rhoncus non, rutrum a tortor. Aliquam rhoncus, dui nec vulputate pretium, nunc purus iaculis magna, vitae convallis sem eros in tortor. Etiam tristique sapien urna.
 			<br /><br />
 			Praesent vulputate tincidunt lectus in dictum. Nulla ut purus ac risus pulvinar vestibulum sed sed nibh. Quisque eget elit vitae nibh dignissim fringilla at eget ipsum. Integer ut dictum tellus. Donec et lacus dictum neque hendrerit vulputate. Nulla a nibh et nibh varius sagittis sed sit amet erat. Vestibulum aliquet rhoncus adipiscing. Nam malesuada, magna et tincidunt laoreet, nibh magna dictum erat, nec rhoncus eros tortor eget nisi. Nunc pretium, dui vel tempus scelerisque, leo nibh pellentesque velit, et cursus turpis sem sed odio. Donec in malesuada nibh. Curabitur porta porta arcu vitae imperdiet. Quisque et nulla a dui aliquet varius. Ut iaculis pretium adipiscing. Etiam interdum dictum dolor, sed venenatis libero vulputate interdum. Vivamus quis purus arcu, quis iaculis ipsum.
@@ -45,7 +48,7 @@
 			Nam id est est, sed scelerisque sem. Ut ut fermentum turpis. Suspendisse mi lorem, commodo ut aliquet vel, mollis id lacus. Sed fermentum pharetra varius. In non massa tellus, id cursus est. In rhoncus, lectus sed commodo malesuada, enim mauris vehicula leo, quis viverra est mi id quam. Nunc facilisis felis nec enim dignissim venenatis. Duis non eros erat. Proin odio nulla, consectetur et tempus ac, tempus vitae magna. Aliquam consectetur nisl a lectus vulputate ultricies. Morbi in adipiscing sem. Fusce pharetra, risus eu dapibus sagittis, sapien odio placerat neque, ut lobortis lacus nunc ac enim. Nam sagittis sem dignissim diam vulputate vitae fermentum enim malesuada.
 		</div>
 		<div class="main-section">
-			<h2>Section 2</h2>
+			<h2>How It Works</h2>
 			Donec condimentum aliquet nulla. Fusce vestibulum tincidunt urna, et fringilla nunc adipiscing id. Suspendisse vel magna non nulla hendrerit feugiat. Vestibulum tristique feugiat dui sit amet egestas. Nam semper elit in nisl dignissim adipiscing. Suspendisse potenti. Sed cursus varius ullamcorper. Sed nisi risus, vestibulum id auctor ut, ultricies sit amet massa. Vivamus vel commodo erat. Duis eget nunc orci.
 			<br /><br />
 			Sed pulvinar sapien a lacus vestibulum aliquam. In sapien turpis, porttitor non sodales et, pretium sed purus. Donec arcu felis, tincidunt quis rutrum a, tempor et nisl. Curabitur ultrices feugiat suscipit. Morbi lobortis aliquam mi non congue. Vivamus id elit vitae sem dapibus vestibulum. Suspendisse fermentum, magna nec luctus cursus, tortor leo laoreet velit, vel semper mauris turpis eget metus. Etiam euismod, risus at rhoncus vulputate, libero velit congue massa, ac consequat neque purus non felis. Phasellus non nulla erat, id lacinia felis. Sed tristique lobortis interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nisi diam, fringilla quis scelerisque ac, laoreet euismod sapien. Sed quis rhoncus magna.
@@ -53,35 +56,49 @@
 			Aenean a orci sit amet urna tempor laoreet nec a massa. Aliquam erat volutpat. Praesent sed velit sed nibh fringilla ullamcorper. Etiam nulla odio, pretium eget varius ut, sagittis id nulla. Sed orci leo, condimentum aliquet suscipit in, faucibus sit amet massa. Proin sollicitudin orci et lorem placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas condimentum sem ac diam iaculis ac congue erat laoreet. Duis hendrerit lobortis ante, ac egestas nisi tristique sed. Pellentesque malesuada, tortor in eleifend dapibus, quam magna placerat felis, tempus facilisis ante augue vel velit. Phasellus suscipit tortor ac nibh condimentum quis tincidunt mi vulputate.
 		</div>
 		<div class="main-section">
-			<h2>Section 3</h2>
-			Pellentesque congue arcu a odio ornare dignissim. Integer bibendum posuere leo, vitae dictum nunc pulvinar a. Morbi vehicula velit velit, id vulputate justo. Pellentesque vel mi sit amet dui placerat ornare. Integer ut nisl dolor. Nullam viverra ullamcorper ultricies. Aliquam blandit gravida augue, ac condimentum odio semper a. Proin posuere quam felis, sit amet pharetra odio. Sed ac augue leo, eget ornare nulla.
+			<h2>What Do I Do</h2>
+			Donec condimentum aliquet nulla. Fusce vestibulum tincidunt urna, et fringilla nunc adipiscing id. Suspendisse vel magna non nulla hendrerit feugiat. Vestibulum tristique feugiat dui sit amet egestas. Nam semper elit in nisl dignissim adipiscing. Suspendisse potenti. Sed cursus varius ullamcorper. Sed nisi risus, vestibulum id auctor ut, ultricies sit amet massa. Vivamus vel commodo erat. Duis eget nunc orci.
 			<br /><br />
-			Sed magna dolor, euismod quis venenatis non, molestie nec enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum posuere, ligula rutrum vehicula congue, augue elit luctus elit, sed ullamcorper enim ante eu leo. Praesent hendrerit, lorem a sagittis volutpat, erat turpis molestie ipsum, eget placerat augue ligula lobortis lectus. Duis fringilla cursus adipiscing. Nam convallis sapien porttitor ligula vulputate gravida. Suspendisse nec mauris ligula. Curabitur arcu nibh, venenatis et scelerisque non, pharetra ut nulla. Quisque lorem purus, imperdiet ac sodales vel, lacinia ac metus.
+			Sed pulvinar sapien a lacus vestibulum aliquam. In sapien turpis, porttitor non sodales et, pretium sed purus. Donec arcu felis, tincidunt quis rutrum a, tempor et nisl. Curabitur ultrices feugiat suscipit. Morbi lobortis aliquam mi non congue. Vivamus id elit vitae sem dapibus vestibulum. Suspendisse fermentum, magna nec luctus cursus, tortor leo laoreet velit, vel semper mauris turpis eget metus. Etiam euismod, risus at rhoncus vulputate, libero velit congue massa, ac consequat neque purus non felis. Phasellus non nulla erat, id lacinia felis. Sed tristique lobortis interdum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed nisi diam, fringilla quis scelerisque ac, laoreet euismod sapien. Sed quis rhoncus magna.
 			<br /><br />
-			Sed vitae mauris erat. Aenean ac massa et mi dapibus ultrices tempor a mi. Curabitur in justo magna, sed molestie arcu. Vestibulum rutrum purus ut orci egestas vitae tempus est vehicula. Nullam fermentum blandit nisl, vitae euismod neque blandit sed. Suspendisse vestibulum eros in velit elementum vestibulum. Aliquam laoreet venenatis elit a lobortis. Integer eget sem ultrices sapien condimentum placerat. Etiam vitae ante eu orci placerat egestas vel vel urna. Suspendisse potenti. Mauris lacinia sapien a neque facilisis eu vestibulum orci ultricies.
-		</div>
+			Aenean a orci sit amet urna tempor laoreet nec a massa. Aliquam erat volutpat. Praesent sed velit sed nibh fringilla ullamcorper. Etiam nulla odio, pretium eget varius ut, sagittis id nulla. Sed orci leo, condimentum aliquet suscipit in, faucibus sit amet massa. Proin sollicitudin orci et lorem placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas condimentum sem ac diam iaculis ac congue erat laoreet. Duis hendrerit lobortis ante, ac egestas nisi tristique sed. Pellentesque malesuada, tortor in eleifend dapibus, quam magna placerat felis, tempus facilisis ante augue vel velit. Phasellus suscipit tortor ac nibh condimentum quis tincidunt mi vulputate.
+		</div>		
 		<div class="main-section">
-			<h2>Section 4</h2>
+			<h2>Who We Are</h2>
+			<div class="three-column-div three-column-margin">
+			<div class="picbox">Joe's Pic</div><br />
+				Joe is a guy from Microsoft.  He is a product guy and passionate about investment.  He has 3 kids and a playgroun in his backyard that rivals any public park.  He is cool.
+				<br /><br />
+				Pellentesque congue arcu a odio ornare dignissim. Integer bibendum posuere leo, vitae dictum nunc pulvinar a. Morbi vehicula velit velit, id vulputate justo. Pellentesque vel mi sit amet dui placerat ornare. Integer ut nisl dolor. Nullam viverra ullamcorper ultricies.
+			</div>
+			<div class="three-column-div three-column-margin">
+			<div class="picbox">Gary's Pic</div><br />
+				Gary is also a guy from Microsoft.  He is a product guy and a web development nerd.  He is only somewhat cool. 
+				<br /><br />
+				Sed magna dolor, euismod quis venenatis non, molestie nec enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum posuere, ligula rutrum vehicula congue, augue elit luctus elit, sed ullamcorper enim ante eu leo.
+			</div>
+			<div class="three-column-div">
+			<div class="picbox">Xavier's Pic</div><br />
+				Xavier is an investment guru.  He is a CFA and worked for many years as an analyst building financial models.  He is also cool.
+				<br /><br />
+				Sed vitae mauris erat. Aenean ac massa et mi dapibus ultrices tempor a mi. Curabitur in justo magna, sed molestie arcu. Vestibulum rutrum purus ut orci egestas vitae tempus est vehicula. Nullam fermentum blandit nisl, vitae euismod neque blandit sed.
+			</div>		
+		</div>
+		<div class="main-section clear-div">
+			<h2>Vision</h2>
 			Quisque rutrum quam non nisi luctus dignissim. Sed suscipit eleifend tellus, non venenatis velit imperdiet eget. Mauris sed ipsum at massa scelerisque imperdiet. Aliquam erat volutpat. Suspendisse id nulla ut augue rhoncus tincidunt eu vitae tellus. Aliquam vitae massa ipsum, quis blandit nisi. Nunc commodo pulvinar tortor ut feugiat. Duis magna dolor, placerat nec hendrerit nec, congue volutpat mi. Donec justo nulla, condimentum non auctor in, rutrum ac sem. Pellentesque at augue nibh.
 			<br /><br />
 			Aliquam erat volutpat. Quisque lobortis justo et eros vulputate sed convallis orci rutrum. Donec sem leo, venenatis vel vehicula id, adipiscing ut enim. Proin iaculis consectetur risus vitae congue. Donec vitae arcu sapien, suscipit tincidunt velit. Vivamus sit amet mauris urna, id commodo velit. Etiam laoreet nisl eget quam pretium luctus vel et tellus.
 			<br /><br />
 			Vestibulum porta bibendum leo, eget bibendum felis eleifend at. Aliquam rhoncus libero ac nibh ultricies molestie. Ut rutrum mauris et libero dapibus luctus. Pellentesque et quam et nisl rhoncus fringilla. Mauris ultricies metus neque, vel congue urna. Donec vehicula sagittis nisi, vel mollis felis porttitor et. Suspendisse vitae ante eget eros sagittis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat accumsan erat, eget scelerisque diam bibendum sit amet. Sed a odio tincidunt turpis ornare gravida ultricies id tellus. Ut pulvinar condimentum diam nec scelerisque. Quisque lobortis neque eget nibh sollicitudin vehicula.
 		</div>
-		<div class="main-section">
-			<h2>Section 5</h2>
-			Morbi non lorem augue, quis porta eros. Donec convallis aliquam sem, pretium porta neque mollis quis. Nam at elit eget augue scelerisque vulputate. Vivamus in odio dui. Sed mauris lacus, mollis id porta nec, egestas vitae metus. Etiam in nisi massa, id luctus mauris. Donec feugiat magna eu lectus congue porta. Pellentesque non erat et dolor scelerisque condimentum. Duis at ligula ut ligula dictum gravida in ac nisi. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam ac augue sit amet mauris vulputate laoreet. Cras vestibulum sem vel quam viverra ultricies. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer lobortis rhoncus velit non consectetur.
-			<br /><br />
-			Cras vulputate metus nec diam convallis ornare. Donec vehicula rhoncus tortor, vel fringilla diam faucibus vel. Donec convallis mauris et risus vehicula in imperdiet enim eleifend. Nunc imperdiet suscipit nibh, id dignissim purus euismod nec. Morbi placerat, nisl quis scelerisque elementum, urna diam vulputate sem, sit amet malesuada nibh velit nec felis. Donec luctus nulla vel elit adipiscing sit amet vestibulum lorem faucibus. Curabitur vel elit velit, id ullamcorper erat. Maecenas congue consequat nibh. Donec sagittis facilisis tempor. Suspendisse erat neque, tincidunt in volutpat quis, pharetra sodales nisl. Proin odio urna, sollicitudin non tempus quis, posuere eu ipsum. Nulla eros dolor, ultrices tempor sodales id, bibendum ac lorem.
-			<br /><br />
-			Integer volutpat sodales arcu, ut lobortis massa fringilla vel. Integer posuere nisl nec lectus ultricies condimentum. Morbi iaculis, nulla id blandit placerat, turpis felis pulvinar risus, non gravida eros nisi vel nibh. Etiam pharetra placerat odio id gravida. In hac habitasse platea dictumst. Curabitur mauris ipsum, bibendum a volutpat eu, mattis ut dolor. Sed sed quam ante, at varius massa. Fusce elementum nulla ut turpis ultricies ut pellentesque elit hendrerit. Cras ullamcorper nisl condimentum risus consequat tristique. Morbi neque nulla, viverra eget pulvinar sed, aliquet quis massa. Quisque dignissim tortor placerat augue condimentum et adipiscing magna aliquet. In vestibulum, elit sit amet condimentum sodales, dolor augue scelerisque orci, malesuada malesuada nibh nulla vitae neque. Donec suscipit blandit justo non pharetra. Sed aliquet lacus in eros dignissim eu tincidunt urna consectetur. Donec rutrum nulla et velit tincidunt vel viverra massa egestas. Phasellus mollis cursus commodo.
-		</div>
 	</div>
-</div>
 
-<div id="footer">
+	<div id="footer">
 	<div class="content">
-		<h4>footer</h4>
+		<h4>Footer</h4>
 		<p>Aenean molestie libero vehicula purus feugiat rhoncus. Quisque id sem nibh, quis mattis nibh. Suspendisse potenti. Aenean varius quam ac lectus malesuada vel elementum libero ultricies. Nullam pretium nulla ac erat tempus ut vehicula est sagittis. Cras ullamcorper mauris a velit ultrices bibendum. Maecenas id ligula massa, ac mollis arcu.</p>
 	</div>
 </div>
+</div>
+

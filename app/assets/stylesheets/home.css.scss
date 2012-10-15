@@ -3,9 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-body { margin: 0px; padding: 0px; }
+body { margin: 0px; padding: 0px; 
+font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;
+}
 
-#header { background-color: white; height: 75px;
+#logo { width: 150px; height: 75px; display: table-cell; vertical-align: middle; }
+#logo-line-1 { font-size: 30px; font-weight: bold; }
+#logo-line-2 { font-size: 20px; }
+#navbar { width: 650px; height: 75px; display: table-cell; vertical-align: middle; text-align: right;}
+
+#header { background-color: white;
+	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
+
 
 -webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
 -moz-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
@@ -22,24 +31,78 @@ top: 0;
 left: 0;
 float: left;
 width: 100%;
-z-index: 12;
+z-index: 10;
 
 }
 
-#poster { background-color: #227788; color: white; padding: 85px 0px 30px 0px; }
-#main { background-color: white; padding: 10px 0px 30px 0px;}
-#footer { background-color: #227788; color: white; padding: 10px 0px; 
-	font-size: 85%; height: 300px; }
+#poster { background-color: #017890; color: white; padding: 85px 0px 30px 0px; 
+display: block;
+width: 100%;
+position: fixed;
+z-index: 1;
+}
+#main { background-color: white; padding: 10px 0px 0px 0px; z-index: 5; 
+display: block;
+width: 100%;
+position: absolute;
+margin-top: 505px;
+
+-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -2px 15px 0px;
+background-attachment: scroll;
+background-clip: border-box;
+background-origin: padding-box;
+border-bottom-color: 
+rgba(0, 0, 0, 0.796875);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+box-shadow: rgba(0, 0, 0, 0.246094) 0
+
+}
+#footer { background-color: #017890; color: white; padding: 10px 0px 20px 0px; margin: 30px 0px 0px 0px;
+	font-size: 85%; }
+
+.form-button {
+	background-color: #E95D22;
+	border: 0px solid white;
+	padding: 15px 22px;
+	margin: 25px 0px 0px 10px;
+	font-size: 200%;
+	color: white;
+	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.form-text-field {
+	background-color: white;
+	border: 0px solid white;
+	padding: 15px 22px;
+	width: 579px;
+	margin: 25px 0px 0px 0px;
+	font-size: 200%;
+	color: #555555;
+	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;	
+}
+
+.three-column-div { width: 230px; float: left; }
+.three-column-margin { margin: 0px 55px 0px 0px; }
+.picbox { width: 230px; height: 230px; background-color: #BBBBBB; text-align: center; display: table-cell; vertical-align: middle; }
+.clear-div { clear: both; }
+
+.chartbox1 { width: 300px; height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px; }
+.poster-blurb { float: left; width: 500px; 
+font-size: 100%;
+color: #E0E0E0;
+padding: 0px 20px 0px 0px;
+font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;
+}
+
+
+h1 { font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif; font-size: 240%; }
+h2 { font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 200%; }
+h3 { font-size: 155%; font-weight: normal; }
+h3, h4, h5 { font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; }
 
 .content { width: 800px; text-align: left; 
 	margin-left: auto; margin-right: auto; }
 
-#logo { width: 150px; float: left; }
-#logo-line-1 {font-size: 30px;  font-weight: bold;}
-#logo-line-2 {font-size: 20px;  }
-#navbar {float:right; }
-
-#poster-title { margin-left: -100px; text-align: center;}
-#poster-sub-title {margin-left: 200px; margin-top: -20px; text-align: center;}
 
 .main-section { padding: 10px 0px; }
