@@ -25,14 +25,48 @@
 
 		</div>
 
+		<script type="text/javascript" charset="utf-8">
+		function validate_user_email() {
+			alert("debug output: validating user email");
+			var email_domain = "@microsoft.com";
+			var user_email = document.getElementById("user_email").value.trim();
+			var domain_pos = user_email.indexOf(email_domain);
+			var error_node = document.getElementById("form_error");
+			if (domain_pos == -1) {
+				error_node.innerHTML = "does not contain domain at all";
+				error_node.style.visibility = "visible";
+				return false;
+			} else if ((user_email.length - domain_pos) != email_domain.length) {
+				error_node.innerHTML = "contains domain, but not at the end";
+				error_node.style.visibility = "visible";
+				return false;
+			} else {
+				error_node.innerHTML = "user successfully created: " + user_email;
+				error_node.style.visibility = "visible";
+				return true;
+			}
+		}
+
+		</script>
+
 		<div class="chartbox1">Some initial chart goes here?  Do we actually need a chart here if we have a chart section below?  Maybe we just need a stock image of a person who is super happy because he's maximing the potential of his 401k... :-)</div>
 
-		<%= form_for(@user = User.new) do |f| %>
+		<div id="form_error">error_string</div>
+		<%= form_for (@user = User.new), 
+			:before => "validate_user_email()",
+			:remote => true do |f| %>
 		  <div class="field actions">
-		    <%= f.text_field :email, :class => "form-text-field",
-		    :placeholder => "enter email to sign up" %><%= f.submit "Sign Up!", :class => "form-button" %>
+		    <%= f.text_field :email, 
+		    :id => "user_email",
+		    :class => "form-text-field",
+		    :placeholder => "enter email to sign up" %><%= f.submit "Sign Up!", 
+		    	:class => "form-button" %>
 		  </div>
 		<% end %>
+
+		<script type="text/javascript" charset="utf-8">
+		$("#new_user").on('ajax:beforeSend', validate_user_email);
+		</script>
 
 	</div>
 </div>

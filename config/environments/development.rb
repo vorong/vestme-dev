@@ -4,7 +4,7 @@ Gvodev::Application.configure do
   config.action_mailer.smtp_settings = {
   :address              => "smtp.gmail.com",
   :port                 => 587,
-  :domain               => 'gvodev.info',
+  :domain               => 'msft401k.com',
   :user_name            => 'msft401k',
   :password             => 'windowsce',
   :authentication       => 'plain',
