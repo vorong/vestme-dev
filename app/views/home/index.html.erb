@@ -1,11 +1,32 @@
 <div id="header">
 	<div class="content">
-		<div id="logo">
+		<div id="logo" onclick="window.location.replace('/');" style="cursor: pointer;">
 			<div id="logo-line-1">msft401k</div>
 			<div id="logo-line-2">by Vest Me</div>			
 		</div>
 
-		<div id="navbar">Our Returns | How It Works | What Do I Do | Who We Are | Vision</div>
+		<div id="navbar">
+			<a id="top-link-signup" href="#" onclick="scroll_to_top()">Sign Up</a> |
+			<a id="top-link-returns" href="#" onclick="top_link_scroll('returns')">Our Returns</a> |
+			<a id="top-link-how" href="#" href="#" onclick="top_link_scroll('how')">How It Works</a> |
+			<a id="top-link-what" href="#" href="#" onclick="top_link_scroll('what')">What Do I Do</a> |
+			<a id="top-link-who" href="#" onclick="top_link_scroll('who')">Who We Are</a> |
+			<a id="top-link-vision" href="#" href="#" onclick="top_link_scroll('vision')">Vision</a>
+		</div>
+
+		<script>
+		function scroll_to_top(){
+			$("html, body").animate({scrollTop: 0}, 1000);
+		}
+		function top_link_scroll(link_target) {
+			$("html, body").animate(
+				{ scrollTop: $('#section-' + link_target).offset().top - 70 }, 1000);
+		}
+
+		$("#navbar a").click(function(event) {
+		  event.preventDefault();
+		});
+		</script>
 
 	</div>
 </div>
@@ -66,7 +87,7 @@
 
 <div id="main">
 	<div class="content">
-		<div class="main-section">
+		<div class="main-section" id="section-returns">
 			<h2>Our Returns</h2>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus faucibus placerat augue quis laoreet. Vestibulum ullamcorper est id nunc bibendum laoreet. Maecenas porttitor nisl commodo risus sodales vestibulum. Donec placerat rhoncus rutrum. Vivamus elit massa, posuere ac rhoncus non, rutrum a tortor. Aliquam rhoncus, dui nec vulputate pretium, nunc purus iaculis magna, vitae convallis sem eros in tortor. Etiam tristique sapien urna.
 			<br /><br />
@@ -74,7 +95,7 @@
 			<br /><br />
 			Nam id est est, sed scelerisque sem. Ut ut fermentum turpis. Suspendisse mi lorem, commodo ut aliquet vel, mollis id lacus. Sed fermentum pharetra varius. In non massa tellus, id cursus est. In rhoncus, lectus sed commodo malesuada, enim mauris vehicula leo, quis viverra est mi id quam. Nunc facilisis felis nec enim dignissim venenatis. Duis non eros erat. Proin odio nulla, consectetur et tempus ac, tempus vitae magna. Aliquam consectetur nisl a lectus vulputate ultricies. Morbi in adipiscing sem. Fusce pharetra, risus eu dapibus sagittis, sapien odio placerat neque, ut lobortis lacus nunc ac enim. Nam sagittis sem dignissim diam vulputate vitae fermentum enim malesuada.
 		</div>
-		<div class="main-section">
+		<div class="main-section" id="section-how">
 			<h2>How It Works</h2>
 			Donec condimentum aliquet nulla. Fusce vestibulum tincidunt urna, et fringilla nunc adipiscing id. Suspendisse vel magna non nulla hendrerit feugiat. Vestibulum tristique feugiat dui sit amet egestas. Nam semper elit in nisl dignissim adipiscing. Suspendisse potenti. Sed cursus varius ullamcorper. Sed nisi risus, vestibulum id auctor ut, ultricies sit amet massa. Vivamus vel commodo erat. Duis eget nunc orci.
 			<br /><br />
@@ -82,7 +103,7 @@
 			<br /><br />
 			Aenean a orci sit amet urna tempor laoreet nec a massa. Aliquam erat volutpat. Praesent sed velit sed nibh fringilla ullamcorper. Etiam nulla odio, pretium eget varius ut, sagittis id nulla. Sed orci leo, condimentum aliquet suscipit in, faucibus sit amet massa. Proin sollicitudin orci et lorem placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas condimentum sem ac diam iaculis ac congue erat laoreet. Duis hendrerit lobortis ante, ac egestas nisi tristique sed. Pellentesque malesuada, tortor in eleifend dapibus, quam magna placerat felis, tempus facilisis ante augue vel velit. Phasellus suscipit tortor ac nibh condimentum quis tincidunt mi vulputate.
 		</div>
-		<div class="main-section">
+		<div class="main-section" id="section-what">
 			<h2>What Do I Do</h2>
 			Donec condimentum aliquet nulla. Fusce vestibulum tincidunt urna, et fringilla nunc adipiscing id. Suspendisse vel magna non nulla hendrerit feugiat. Vestibulum tristique feugiat dui sit amet egestas. Nam semper elit in nisl dignissim adipiscing. Suspendisse potenti. Sed cursus varius ullamcorper. Sed nisi risus, vestibulum id auctor ut, ultricies sit amet massa. Vivamus vel commodo erat. Duis eget nunc orci.
 			<br /><br />
@@ -90,7 +111,7 @@
 			<br /><br />
 			Aenean a orci sit amet urna tempor laoreet nec a massa. Aliquam erat volutpat. Praesent sed velit sed nibh fringilla ullamcorper. Etiam nulla odio, pretium eget varius ut, sagittis id nulla. Sed orci leo, condimentum aliquet suscipit in, faucibus sit amet massa. Proin sollicitudin orci et lorem placerat pretium. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas condimentum sem ac diam iaculis ac congue erat laoreet. Duis hendrerit lobortis ante, ac egestas nisi tristique sed. Pellentesque malesuada, tortor in eleifend dapibus, quam magna placerat felis, tempus facilisis ante augue vel velit. Phasellus suscipit tortor ac nibh condimentum quis tincidunt mi vulputate.
 		</div>		
-		<div class="main-section">
+		<div class="main-section" id="section-who">
 			<h2>Who We Are</h2>
 			<div class="three-column-div three-column-margin">
 			<div class="picbox">Joe's Pic</div><br />
@@ -111,13 +132,17 @@
 				Sed vitae mauris erat. Aenean ac massa et mi dapibus ultrices tempor a mi. Curabitur in justo magna, sed molestie arcu. Vestibulum rutrum purus ut orci egestas vitae tempus est vehicula. Nullam fermentum blandit nisl, vitae euismod neque blandit sed.
 			</div>		
 		</div>
-		<div class="main-section clear-div">
+		<div class="main-section clear-div" id="section-vision">
 			<h2>Vision</h2>
 			Quisque rutrum quam non nisi luctus dignissim. Sed suscipit eleifend tellus, non venenatis velit imperdiet eget. Mauris sed ipsum at massa scelerisque imperdiet. Aliquam erat volutpat. Suspendisse id nulla ut augue rhoncus tincidunt eu vitae tellus. Aliquam vitae massa ipsum, quis blandit nisi. Nunc commodo pulvinar tortor ut feugiat. Duis magna dolor, placerat nec hendrerit nec, congue volutpat mi. Donec justo nulla, condimentum non auctor in, rutrum ac sem. Pellentesque at augue nibh.
 			<br /><br />
 			Aliquam erat volutpat. Quisque lobortis justo et eros vulputate sed convallis orci rutrum. Donec sem leo, venenatis vel vehicula id, adipiscing ut enim. Proin iaculis consectetur risus vitae congue. Donec vitae arcu sapien, suscipit tincidunt velit. Vivamus sit amet mauris urna, id commodo velit. Etiam laoreet nisl eget quam pretium luctus vel et tellus.
 			<br /><br />
 			Vestibulum porta bibendum leo, eget bibendum felis eleifend at. Aliquam rhoncus libero ac nibh ultricies molestie. Ut rutrum mauris et libero dapibus luctus. Pellentesque et quam et nisl rhoncus fringilla. Mauris ultricies metus neque, vel congue urna. Donec vehicula sagittis nisi, vel mollis felis porttitor et. Suspendisse vitae ante eget eros sagittis viverra. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat accumsan erat, eget scelerisque diam bibendum sit amet. Sed a odio tincidunt turpis ornare gravida ultricies id tellus. Ut pulvinar condimentum diam nec scelerisque. Quisque lobortis neque eget nibh sollicitudin vehicula.
+			<br /><br />
+			Quisque rutrum quam non nisi luctus dignissim. Sed suscipit eleifend tellus, non venenatis velit imperdiet eget. Mauris sed ipsum at massa scelerisque imperdiet. Aliquam erat volutpat. Suspendisse id nulla ut augue rhoncus tincidunt eu vitae tellus. Aliquam vitae massa ipsum, quis blandit nisi. Nunc commodo pulvinar tortor ut feugiat. Duis magna dolor, placerat nec hendrerit nec, congue volutpat mi. Donec justo nulla, condimentum non auctor in, rutrum ac sem. Pellentesque at augue nibh.
+			<br /><br />
+			Aliquam erat volutpat. Quisque lobortis justo et eros vulputate sed convallis orci rutrum. Donec sem leo, venenatis vel vehicula id, adipiscing ut enim. Proin iaculis consectetur risus vitae congue. Donec vitae arcu sapien, suscipit tincidunt velit. Vivamus sit amet mauris urna, id commodo velit. Etiam laoreet nisl eget quam pretium luctus vel et tellus.
 		</div>
 	</div>
 
