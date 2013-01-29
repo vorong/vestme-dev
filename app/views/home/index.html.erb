@@ -27,15 +27,39 @@
 
 		<div class="chartbox1">Some initial chart goes here?  Do we actually need a chart here if we have a chart section below?  Maybe we just need a stock image of a person who is super happy because he's maximing the potential of his 401k... :-)</div>
 
+		<% if (notice =~ /SIGNUP_ERROR/) == 0 %>
+		<div class="error-div">
+			<% if notice == "SIGNUP_ERROR_EMAIL_EMPTY" %><%= "Dude, you can't just leave this shit blank." %>
+			<% elsif notice == "SIGNUP_ERROR_EMAIL_INVALID" %><%= "I said @microsoft or @gmail.  This is why we can't have nice things." %>
+			<% elsif notice == "SIGNUP_ERROR_EMAIL_DUPLICATE" %><%= "Tricky guy.  You're already signed up, homie..." %>
+			<% elsif notice == "SIGNUP_ERROR_UNKNOWN" %><%= "Something extremely unusual happened.  We're looking into it." %>
+			<% else %><%= "Something superbly unusual happened.  We're looking into it." %>
+			<% end %>
+		</div>
+		<% elsif %>
+		&nbsp;
+		<% end %>
+
 		<%= form_for (@user = User.new) do |f| %>
 		  <div class="field actions">
 		    <%= f.text_field :email, 
 		    :id => "user_email",
 		    :class => "form-text-field",
-		    :placeholder => "enter your @microsoft email" %><%= f.submit "Sign Up!", 
+		    :placeholder => "enter your @microsoft or @gmail email",
+		    :value => params[:email] %><%= f.submit "Sign Up!", 
 		    	:class => "form-button" %>
 		  </div>
 		<% end %>
+
+		<script>
+		// PREVENT MULTIPLE FORM SUBMISSIONS
+		$("#new_user").submit(function() {
+		    $(this).submit(function() {
+		        return false;
+		    });
+		    return true;
+		});
+		</script>
 
 	</div>
 </div>
