@@ -90,6 +90,26 @@ body {
 	box-shadow: rgba(0, 0, 0, 0.246094) 0
 }
 
+#main-terms { 
+	background-color: white; 
+	padding: 10px 0px 0px 0px; 
+	z-index: 5; 
+	display: block;
+	width: 100%;
+	position: absolute;
+	margin-top: 190px;
+	/* slide-away styling */
+	-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -2px 15px 0px;
+	background-attachment: scroll;
+	background-clip: border-box;
+	background-origin: padding-box;
+	border-bottom-color: 
+	rgba(0, 0, 0, 0.796875);
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	box-shadow: rgba(0, 0, 0, 0.246094) 0
+}
+
 #footer { 
 	background-color: #017890; 
 	color: white; 
