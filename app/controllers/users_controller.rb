@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  http_basic_authenticate_with :name => "mennen", :password => "h4x0rPW!"
+  
   # POST /users
   # POST /users.json
   def create
