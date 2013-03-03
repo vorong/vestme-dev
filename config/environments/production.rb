@@ -2,11 +2,11 @@ Gvodev::Application.configure do
   # UserMailer config
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  :address              => "smtp.gmail.com",
+  :address              => "smtp.1and1.com",
   :port                 => 587,
   :domain               => 'msft401k.com',
-  :user_name            => 'msft401k',
-  :password             => 'windowsce',
+  :user_name            => 'team@msft401k.com',
+  :password             => 'h4x0rPW!',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
 

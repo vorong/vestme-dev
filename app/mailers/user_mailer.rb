@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default from: "notifications@gvodev.info"
+  default from: "team@msft401k.com"
 
   def welcome_email(user)
     @user = user
-    @url  = "http://gvodev.info"
-    mail(:to => user.email, :subject => "Welcome to My Awesome Site")
+    @url  = "http://www.msft401k.com"
+    mail(:to => user.email, :subject => "Welcome to msft401k!")
   end
 end

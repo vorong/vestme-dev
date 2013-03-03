@@ -4,14 +4,73 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
-    <h1>Welcome to gvodev.info</h1>
-    <p>
-      You have successfully signed up to gvodev.info.  
-      We will send you monthly rebalance information to your email: <%= @user.email %>.<br/>
-    </p>
-    <p>
-      Please come again: <%= @url %>.  ;-)
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+    <div id="header">
+      <div class="content">
+        <div id="logo" onclick="window.location.replace('/');" style="cursor: pointer;">
+          <div id="logo-line-1">msft401k</div>
+          <div id="logo-line-2">by Vest Me</div>      
+        </div>
+
+        <div id="navbar">
+          <a id="top-link-signup" href="/">Sign Up</a> |
+          <a id="top-link-returns" href="/#returns">Our Returns</a> |
+          <a id="top-link-how" href="/#how">How It Works</a> |
+          <a id="top-link-what" href="/#what">What Do I Do</a> |
+          <a id="top-link-who" href="/#who">Who We Are</a> |
+          <a id="top-link-vision" href="/#vision">Vision</a>
+        </div>
+
+        <script>
+          function handle_hash() {
+            // nothing to do for this page
+          }
+        $("#navbar a").click(function(event) {
+            //event.preventDefault();
+        });
+        </script>
+
+      </div>
+    </div>
+
+    <div id="poster">
+      <div class="content">
+        <h1>Welcome!</h1>
+      </div>
+    </div>
+
+    <div id="main-terms">
+      <div class="content">
+        <h2>You're Signed Up!</h2>
+
+        <p>You have successfully signed up at msft401k.com.  We will send you monthly rebalance information to your email: <%= @user.email %>.</p>
+
+        <h2>Start Now</h2>
+
+        <p>Start now by setting your allocations to this month's blueprint.  Just follow the simple step-by-step instructions below.</p>
+
+        <h2>Log In To Fidelity</h2>
+        <div class="chartbox1">Login Screenshot 1</div><br /><br />
+        <div class="chartbox1">Login Screenshot 2</div><br /><br />
+        <div class="chartbox1">Login Screenshot 3</div>
+
+        <h2>Update Your Allocations</h2>
+        <div class="chartbox1">Allocations Update Screenshot 1</div><br /><br />
+        <div class="chartbox1">Allocations Update Screenshot 2</div><br /><br />
+        <div class="chartbox1">Allocations Update Screenshot 3</div>
+
+      </div>
+
+      <div id="footer">
+        <div class="content">
+          <h4>Footer</h4>
+          <p>
+          We are NOT investment advisors.  See our <a href="terms">Terms</a>.
+          </p>
+          <p><a href="#">Contact Us</a> | <a href="#">Foo</a> | <a href="#">Help</a></p>
+        </div>
+      </div>
+    </div>
+
+
   </body>
 </html>
