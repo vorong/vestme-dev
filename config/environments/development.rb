@@ -6,7 +6,7 @@ Gvodev::Application.configure do
   :port                 => 587,
   :domain               => 'msft401k.com',
   :user_name            => 'msft401k',
-  :password             => 'windowsce',
+  :password             => 'h4x0rPW!',
   :authentication       => 'plain',
   :enable_starttls_auto => true  }
   

@@ -2,44 +2,80 @@
 <html>
   <head>
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <style type="text/css">
+    #main { 
+      background-color: white; 
+      padding: 10px 0px 0px 0px; 
+      width: 100%;
+    }
+
+    #footer { 
+      background-color: #017890; 
+      color: white; 
+      padding: 10px 0px 20px 0px; 
+      margin: 30px 0px 0px 0px;
+      font-size: 85%; 
+    }
+
+    h1 { font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif; font-size: 240%; }
+    h2 { font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 200%; }
+    h3 { font-size: 155%; font-weight: normal; }
+    h3, h4, h5 { font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; }
+
+    .content { 
+      width: 800px; 
+      text-align: left; 
+      margin-left: auto; 
+      margin-right: auto; 
+    }
+
+    .main-section { 
+      padding: 10px 0px; 
+    }
+
+    a {
+      text-decoration: none;
+      color: #88BBFF;
+    }
+
+    a:hover, a:active {
+      color: orange;
+    }
+
+    #navbar {
+      color: #BBBBBB;
+    }
+    </style>
   </head>
-  <body>
-    <div id="header">
-      <div class="content">
-        <div id="logo" onclick="window.location.replace('/');" style="cursor: pointer;">
-          <div id="logo-line-1">msft401k</div>
-          <div id="logo-line-2">by Vest Me</div>      
-        </div>
+  <body style="width: 800px; font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
+    <table style="background-color: white; font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;">
+      <tr>
+        <td width="150" height="75">
+          <div style="font-size: 30px; font-weight: bold;">msft401k</div>
+          <div style="font-size: 20px;">by Vest Me</div>
+        </td>
 
-        <div id="navbar">
-          <a id="top-link-signup" href="/">Sign Up</a> |
-          <a id="top-link-returns" href="/#returns">Our Returns</a> |
-          <a id="top-link-how" href="/#how">How It Works</a> |
-          <a id="top-link-what" href="/#what">What Do I Do</a> |
-          <a id="top-link-who" href="/#who">Who We Are</a> |
-          <a id="top-link-vision" href="/#vision">Vision</a>
-        </div>
+        <td width="650">
+          <a id="top-link-signup" href="http://www.msft401k.com/">Sign Up</a> |
+          <a id="top-link-returns" href="http://www.msft401k.com/#returns">Our Returns</a> |
+          <a id="top-link-how" href="http://www.msft401k.com/#how">How It Works</a> |
+          <a id="top-link-what" href="http://www.msft401k.com/#what">What Do I Do</a> |
+          <a id="top-link-who" href="http://www.msft401k.com/#who">Who We Are</a> |
+          <a id="top-link-vision" href="http://www.msft401k.com/#vision">Vision</a>
+        </td>
+      </tr>
+    </table>
 
-        <script>
-          function handle_hash() {
-            // nothing to do for this page
-          }
-        $("#navbar a").click(function(event) {
-            //event.preventDefault();
-        });
-        </script>
+    <table>
+      <tr>
+        <td width="800" height="75" style="background-color: #017890; color: white; padding: 0px 0px 0px 0px;">
+          <h1>Welcome!</h1>
+        </td>
+      </tr>
+    </table>
 
-      </div>
-    </div>
-
-    <div id="poster">
-      <div class="content">
-        <h1>Welcome!</h1>
-      </div>
-    </div>
-
-    <div id="main-terms">
-      <div class="content">
+    <div id="main" style="">
+      <div class="content" style="">
         <h2>You're Signed Up!</h2>
 
         <p>You have successfully signed up at msft401k.com.  We will send you monthly rebalance information to your email: <%= @user.email %>.</p>
@@ -49,22 +85,22 @@
         <p>Start now by setting your allocations to this month's blueprint.  Just follow the simple step-by-step instructions below.</p>
 
         <h2>Log In To Fidelity</h2>
-        <div class="chartbox1">Login Screenshot 1</div><br /><br />
-        <div class="chartbox1">Login Screenshot 2</div><br /><br />
-        <div class="chartbox1">Login Screenshot 3</div>
+        <div style="width: 300px; min-height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px;">Login Screenshot 1</div><br /><br />
+        <div style="width: 300px; min-height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px;">Login Screenshot 2</div><br /><br />
+        <div style="width: 300px; min-height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px;">Login Screenshot 3</div>
 
         <h2>Update Your Allocations</h2>
-        <div class="chartbox1">Allocations Update Screenshot 1</div><br /><br />
-        <div class="chartbox1">Allocations Update Screenshot 2</div><br /><br />
-        <div class="chartbox1">Allocations Update Screenshot 3</div>
+        <div style="width: 300px; min-height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px;">Allocations Update Screenshot 1</div><br /><br />
+        <div style="width: 300px; min-height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px;">Allocations Update Screenshot 2</div><br /><br />
+        <div style="width: 300px; min-height: 200px; background-color: #FFCCAA; text-align: center; display: table-cell; vertical-align: middle; margin: 0px; color: black; padding: 0px 30px;">Allocations Update Screenshot 3</div>
 
       </div>
 
-      <div id="footer">
-        <div class="content">
+      <div id="footer" style="">
+        <div class="content" style="">
           <h4>Footer</h4>
           <p>
-          We are NOT investment advisors.  See our <a href="terms">Terms</a>.
+          We are NOT investment advisors.  See our <a href="http://www.msft401k.com/terms">Terms</a>.
           </p>
           <p><a href="#">Contact Us</a> | <a href="#">Foo</a> | <a href="#">Help</a></p>
         </div>
