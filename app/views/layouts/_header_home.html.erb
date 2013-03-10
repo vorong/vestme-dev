@@ -1,0 +1,34 @@
+<header id="header">
+	<div class="content">
+		<div id="logo" onclick="window.location.replace('/');" style="cursor: pointer;">
+			<div id="logo-line-1">msft401k</div>
+			<div id="logo-line-2">by Vest Me</div>			
+		</div>
+
+		<div id="navbar">
+			<a id="top-link-signup" href="#" onclick="scroll_to_top()">Sign Up</a> |
+			<a id="top-link-returns" href="#" onclick="top_link_scroll('returns')">Our Returns</a> |
+			<a id="top-link-how" href="#" onclick="top_link_scroll('how')">How It Works</a> |
+			<a id="top-link-what" href="#" onclick="top_link_scroll('what')">What Do I Do</a> |
+			<a id="top-link-who" href="#" onclick="top_link_scroll('who')">Who We Are</a> |
+			<a id="top-link-vision" href="#" onclick="top_link_scroll('vision')">Vision</a>
+		</div>
+
+		<script>
+		function scroll_to_top(){
+			$("html, body").animate({scrollTop: 0}, 1000);
+		}
+		function top_link_scroll(link_target) {
+			$("html, body").animate(
+				{ scrollTop: $('#section-' + link_target).offset().top - 70 }, 1000);
+		}
+	  	function handle_hash() {
+	  		top_link_scroll(window.location.hash.substring(1));
+  		}
+		$("#navbar a").click(function(event) {
+		  event.preventDefault();
+		});
+		</script>
+
+	</div>
+</header>

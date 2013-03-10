@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default from: "team@msft401k.com"
+  default from: "The msft401k Team <team@msft401k.com>"
 
   def welcome_email(user)
     @user = user

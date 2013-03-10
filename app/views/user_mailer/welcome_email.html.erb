@@ -7,37 +7,8 @@
     <div id="main">
       <div class="content">
         <h2 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 200%;">Get excited! You're Signed Up!!</h2>
-
-        <p>You're all set.  We will send you monthly rebalance information to your email: <%= @user.email %>.  Questions?  E-mail us: <a href="mailto:team@msft401k.com">team@msft401k.com</a>.</p>
-
-        <h2 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 200%;">Start Now</h2>
-
-        <p>Start now by setting your allocations to this month's blueprint.  Just follow the simple step-by-step instructions below.</p>
-
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 1: Log into your Microsoft 401k account at <a href="http://www.401k.com">http://www.401k.com</a>.</h4>
-        <div><img src="assets/stepbystep/Step1.png" alt="Step 1" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 2: If you have multiple relationships with Fidelity, choose Microsoft Benefits.</h4>
-        <div><img src="assets/stepbystep/Step2.png" alt="Step 2" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 3: Select your Microsoft 401k Plan account.</h4>
-        <div><img src="assets/stepbystep/Step3.png" alt="Step 3" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 4: On the account summary page, click 'Change Investments' in the menu on the left.</h4>
-        <div><img src="assets/stepbystep/Step4.png" alt="Step 4" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 5: Click 'Rebalance.'</h4>
-        <div><img src="assets/stepbystep/Step5.png" alt="Step 5" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 6: Click 'Start Your Rebalance.'</h4>
-        <div><img src="assets/stepbystep/Step6.png" alt="Step 6" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 7: Enter your rebalance percentages and click 'Begin Rebalance.'</h4>
-        <p>Look for the email from team@msft401k.com at the end of every month.  In the email, you will see our recommended asset allocation for the Microsoft 401k Plan.</p>
-        <div><img src="assets/stepbystep/Step7.png" alt="Step 7" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 8: Choose 'Rebalance my account now, one time' and click 'Next.'</h4>
-        <div><img src="assets/stepbystep/Step8.png" alt="Step 8" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 9: Read the electronic prospectus for any new investments and click 'Continue.'</h4>
-        <div><img src="assets/stepbystep/Step9.png" alt="Step 9" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 10: Review the percentages and click 'Submit.'</h4>
-        <div><img src="assets/stepbystep/Step10.png" alt="Step 10" /></div>
-        <h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 11: You're done!  At the end, you'll see a confirmation page.</h4>
-        <div><img src="assets/stepbystep/Step11.png" alt="Step 11" /></div>
-
+        <%= render 'layouts/signupblurb' %>
+        <%= render 'layouts/instructions' %>
       </div>
     </div>
   </body>

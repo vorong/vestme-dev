@@ -7,7 +7,7 @@ Gvodev::Application.configure do
   :domain               => 'msft401k.com',
   :user_name            => 'team@msft401k.com',
   :password             => 'h4x0rPW!',
-  :authentication       => 'plain',
+  :authentication       => 'login',
   :enable_starttls_auto => true  }
   
   # Settings specified here will take precedence over those in config/application.rb
