@@ -19,6 +19,7 @@
 			$("html, body").animate({scrollTop: 0}, 1000);
 		}
 		function top_link_scroll(link_target) {
+			if (link_target == "") return;
 			$("html, body").animate(
 				{ scrollTop: $('#section-' + link_target).offset().top - 70 }, 1000);
 		}

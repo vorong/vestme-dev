@@ -7,6 +7,18 @@
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
   <%= csrf_meta_tags %>
 
+  <script type="text/javascript">
+  	var isiDevice = navigator.userAgent.match(/iPad|iPhone|iPod/g);
+  	if (isiDevice != null) { 
+  		alert("iphone");
+  		document.write('<meta name="viewport" content="width=800, user-scaleable=no">')
+  	}
+  	else {
+  		alert("not iphone");
+  		//
+  	}
+  </script>
+
   <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
   <style>
     /* Prevent the slideshow from flashing on load */
