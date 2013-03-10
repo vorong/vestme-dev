@@ -132,6 +132,7 @@ body {
 	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 	float: right;
 	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
 }
 
 .form-button:hover, .form-button:active {
@@ -149,6 +150,8 @@ body {
 	color: #555555;
 	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;	
 	float: left;
+	-webkit-appearance: none;
+	-webkit-border-radius: 0px;
 }
 
 .signup-form { margin-top: -1em;}
