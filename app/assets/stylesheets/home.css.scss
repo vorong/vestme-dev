@@ -87,7 +87,7 @@ body {
 	border-bottom-color: 
 	rgba(0, 0, 0, 0.796875);
 	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	border-bottom-width: 0px;
 	box-shadow: rgba(0, 0, 0, 0.246094) 0
 }
 
@@ -107,16 +107,18 @@ body {
 	border-bottom-color: 
 	rgba(0, 0, 0, 0.796875);
 	border-bottom-style: solid;
-	border-bottom-width: 1px;
+	border-bottom-width: 0px;
 	box-shadow: rgba(0, 0, 0, 0.246094) 0
 }
 
 #footer { 
 	background-color: #017890; 
 	color: white; 
+	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 	padding: 10px 0px 20px 0px; 
 	margin: 30px 0px 0px 0px;
 	font-size: 85%; 
+	font-weight: normal;
 }
 
 .form-button {
@@ -222,18 +224,28 @@ h3, h4, h5 { font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-ser
 
 a {
 	text-decoration: none;
-	color: #88BBFF;
+	color: #F08E64;
 }
 
 a:hover, a:active {
-	color: orange;
+	color: #67AEBC;
+}
+
+footer a {
+	text-decoration: underline;
+	color: #FFFFFF;
+}
+
+footer a:hover, a:active {
+	color: #FFFFFF;
 }
 
 #navbar {
-	color: #BBBBBB;
+	color: #999999;
 }
 
 .chart-img {
 	padding: 0px 0px 0px 0px;
 	margin: 0px 0px -100px 0px;
 }
+
