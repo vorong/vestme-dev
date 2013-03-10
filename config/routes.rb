@@ -3,6 +3,7 @@ Gvodev::Application.routes.draw do
 
   get "home/index"
   get "terms" => "home#terms"
+  get "stepbystep" => "home#stepbystep"
 
   root :to => "home#index"
 
