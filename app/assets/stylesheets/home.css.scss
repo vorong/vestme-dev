@@ -74,6 +74,7 @@ body {
 
 @media screen and (max-device-width: 480px) { 
 	#poster { -webkit-text-size-adjust:none; }
+	#poster-bullets { font-size: 110%; }
 }
 
 #main { 
@@ -203,7 +204,7 @@ body {
 	padding: 0px 30px; 
 }
 
-.poster-blurb { 
+#poster-blurb { 
 	float: left; 
 	width: 500px; 
 	font-size: 100%;

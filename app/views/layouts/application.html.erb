@@ -15,6 +15,24 @@
   	else {
   		//
   	}
+
+  	var isWP7Device = navigator.userAgent.match(/Windows Phone OS 7/g);
+  	if (isWP7Device != null) { 
+  		$(function() {
+	      var pElements = document.getElementsByTagName("p");
+	      for (i=0; i<pElements.length; i++) {
+	      	pElements[i].style.fontSize="180%";
+	      }
+	      var spanElements = document.getElementsByTagName("span");
+	      for (i=0; i<spanElements.length; i++) {
+	      	spanElements[i].style.fontSize="180%";
+	      }
+	      var h4Elements = document.getElementsByTagName("h4");
+	      for (i=0; i<h4Elements.length; i++) {
+	      	h4Elements[i].style.fontSize="180%";
+	      }
+	    });  		
+  	}
   </script>
 
   <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
@@ -73,10 +91,11 @@
 
 	.slidesjs-pagination li a:hover { background-position: 0 -26px }
 
+	/*
 	#slides a:link, #slides a:visited { color: #333 }
 
 	#slides a:hover, #slides a:active { color: #9e2020 }
-
+	*/
     /* Media quires for a responsive layout */
       .container {
         width: 800px
