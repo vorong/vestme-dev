@@ -2,30 +2,32 @@
 
 <div id="poster">
 	<div class="content">
-		<h1>Unlock the potential of your Microsoft 401k</h1>
-
+		<h1 style="font-size: 255%;">FREE! Unlock the potential of your 401k!</h1>
+		<h2 style="font-size: 155%; margin-top: -10px; margin-bottom: 30px; font-weight: normal;">Invest in your Microsoft 401k with reduced volatility and higher returns</h2>
 		<div id="poster-blurb">
-
-		<h3>We provide a better way to invest your 401k with reduced volatility and higher returns</h3>
-			<div id="poster-bullets">
+			<div id="poster-bullets" style="width: 400px; font-size: 120%; font-weight: normal; margin-bottom: -10px; float: left;">
 				<ul>
+					<li>Reduced volatility; higher returns</li>
 					<li>Tailor-made for the Microsoft 401k Plan</li>
-					<li>Easy to follow monthly rebalance signals</li>
-					<li>Made by Microsoft employees for Microsoft employees</li>
-					<li>It's free!  Just takes 5 minutes per month</li>
+					<li>Just 5 minutes a quarter</li>
+				</ul>
+			</div>
+			<div id="poster-bullets" style="width: 400px; font-size: 120%; font-weight: normal; margin-bottom: -10px; float: left;">
+				<ul>
+					<li>We never ask for personal information</li>
+					<li>Free monthly investment tips</li>
+					<li>Did we mention it was FREE!</li>
 				</ul>
 			</div>
 		</div>
-
-		<div><img width="280" height="200" src="assets/Growth_vs_SP500.png" /></div>
 		<br />
 
 		<% if (notice =~ /SIGNUP_ERROR/) == 0 %>
 		<div class="error-div">
 			<% if notice == "SIGNUP_ERROR_EMAIL_EMPTY" %><%= "The email field cannot be left blank." %>
 			<% elsif notice == "SIGNUP_ERROR_EMAIL_INVALID" %><%= "This service is only available to people with an @microsoft.com email address." %>
-			<% elsif notice == "SIGNUP_ERROR_UNKNOWN" %><%= "Something unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@msft401k.com">team@msft401k.com</a>.
-			<% else %><%= "Something superbly unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@msft401k.com">team@msft401k.com</a>.
+			<% elsif notice == "SIGNUP_ERROR_UNKNOWN" %><%= "Something unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
+			<% else %><%= "Something superbly unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
 			<% end %>
 		</div>
 		<% elsif %>
@@ -58,73 +60,20 @@
 
 <div id="main">
 	<div class="content">
-		<div class="main-section" id="section-returns">
-			<h2>Our Returns</h2>
-
-			  <!-- SlidesJS Required: Start Slides -->
-			  <!-- The container is used to define the width of the slideshow -->
-			  <div class="container">
-			    <div id="slides">
-			      <img src="assets/chartcarousel/Drawdown_vs_SP500.png" alt="Drawdown vs. S&amp;P 500">
-			      <img src="assets/chartcarousel/Growth_vs_SP500.png" alt="Growth vs. S&amp;P 500">
-			      <img src="assets/chartcarousel/example-slide-3.jpg" alt="Photo by: Mike Ranweiler Link: http://www.flickr.com/photos/27874907@N04/4833059991/">
-			      <img src="assets/chartcarousel/example-slide-4.jpg" alt="Photo by: Stuart SeegerLink: http://www.flickr.com/photos/stuseeger/97577796/">
-			      <a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left"></i></a>
-			      <a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right"></i></a>
-			    </div>
-			  </div>
-			  <!-- End SlidesJS Required: Start Slides -->
-
-			<!-- SlidesJS Required: Link to jquery.slides.js -->
-			<script src="assets/application.js"></script>
-			<!-- End SlidesJS Required -->
-
-  <!-- SlidesJS Required: Initialize SlidesJS with a jQuery doc ready -->
-  <script>
-  	//alert(navigator.userAgent);
-  	var isWP7Device = navigator.userAgent.match(/Windows Phone OS 7/g);
-  	if (isWP7Device != null) { 
-  		$(function() {
-	      $('#slides').slidesjs({
-	        width: 800,
-	        height: 533
-	      });
-	      $(".icon-chevron-left").hide();
-	      $(".icon-chevron-right").hide();
-	      document.getElementById("poster-bullets").style.fontSize="150%";
-	      var prevNextElements = document.getElementById("slides").getElementsByTagName("a");
-	      for (i=0; i<prevNextElements.length; i++) {
-	      	if (prevNextElements[i].innerHTML == "Previous" || prevNextElements[i].innerHTML == "Next") {
-		      	prevNextElements[i].style.fontSize="180%";
-		      	prevNextElements[i].innerHTML += "&nbsp;&nbsp;&nbsp;"
-	      	}
-	      }
-	    });  		
-  	}
-  	else {
-  		$(function() {
-	      $('#slides').slidesjs({
-	        width: 800,
-	        height: 533,
-	        navigation: false
-	      });
-	    });
-  	}
-
-	$("#slides").click(function(){ 
-	    $(".icon-chevron-right").trigger("click"); 
-	}); 
-  </script>
-  <!-- End SlidesJS Required -->
-		</div>
 		<div class="main-section" id="section-how">
 			<h2>How It Works</h2>
 			<p id="foobar">You've probably heard about the difference between stocks and bonds, and in particular that stocks are "risker."  Well, generally speaking, that is true, and that's a core part of how this works...</p>
-			<p>First, we measure and track market risk.  Then, when the market risk is high, we put more money into bonds -- this is to protect you against a stock market crash, like in 2008.  When market risk is low, we put more money into stocks -- this is so you maximize gains when the stock market is doing well.  And the extra secret sauce: we tailor this to the invesment options available under the Microsoft 401k plan.</p>
+			<p>First, we measure and track market risk.  Then, when the market risk is high, we put more money into bonds -- this is to protect you against a stock market crash, like in 2008.  When market risk is low, we put more money into stocks -- this is so you maximize gains when the stock market is doing well.  And the extra secret sauce: we tailor fit it to the invesment options available under the Microsoft 401k plan.</p>
+		</div>
+		<div class="main-section" id="section-returns">
+			<h2>Our Returns</h2>
+			<p>Check out our returns against the S&amp;P 500 both when the dot-com bubble burst in early 2000 and the crash of 2008.  Because we allocate funds dynamically to safer investments during periods of high volatility, we are able to protect against the huge dips and have a smoother return.</p>
+
+			<img src="assets/chartcarousel/Growth_vs_SP500.png" width="800" alt="Growth vs. S&amp;P 500">
 		</div>
 		<div class="main-section" id="section-what">
 			<h2>What Do I Do</h2>
-			<p>It's so easy!  Every month, we'll send you our recommendation for asset allocations.  We'll tell you step-by-step how to log into your account and update your 401k account allocations to maximize performance and minimize risk.</p>
+			<p>It's so easy!  Every quarter, we'll send you our recommendation for allocations in your 401k to maximize performance and minimize risk along with detailed <a href="stepbystep">step-by-step instructions</a>.  But, you don't have to give us your log-in information or access to your hard-earned cash.  You log in and rebalance your 401k by yourself so you're always 100% in control.</p>
 			<div class="two-column-div two-column-margin">
 				<img src="assets/Rebalance.png" alt="Rebalance" />
 				<br /><span style="font-style: italic; font-size: 80%;">Rebalance</span>
@@ -144,33 +93,20 @@
 			</div>
 			<div class="three-column-div three-column-margin">
 			<div><img src="assets/VestMe-Gary.jpg" alt="Gary" /></div>
-				<p>Gary is another Microsoftie product guy.  He's also web development nerd and he'll talk your ear off about the benefits of a plant-based diet.</p>
+				<p>Gary is also a Microsoftie.  He's also a web development nerd, and he'll talk your ear off about the benefits of a plant-based diet.</p>
 			</div>
 			<div class="three-column-div">
 			<div><img src="assets/VestMe-Xavier.jpg" alt="Xavier" /></div>
-				<p>Xavier is an investment guru.  He is a CFA and worked for many years as an analyst building financial models.</p>
+				<p>Xavier is an investment guru.  He is a CFA charter holder with more than 10 years of experience building financial models.</p>
 			</div>
 			<div class="clear-div"></div>
 		</div>
 		<div class="main-section" id="section-vision">
 			<h2>Vision</h2>
-			<p>We started MSFT401k.com because we couldn’t find a decent way to invest our own money. We are
-			setting out to build a product that we want first, because we think it will help friends and coworkers.</p>
-			<p>Advisors resign to push only one type of investment strategy for money in 401ks. They push Modern
-			Portfolio Theory and their passive portfolios as the only solutions. These strategies require that
-			investors select a level of risk as if risk equals more reward. Under Modern Portfolio Theory investors
-			need to increase risk to increase returns eventually causing the strategy and investor to crack in major
-			market meltdowns (remember 2008?).</p>
-			<p>Online as well as paid advisors don’t offer guidance on 401k plans because there is no way for them
-			to monetize the management of money held in a 401k. As such there are limited strategies and help
-			provided to participants of 401ks.</p>
-			<p>We believe in an alternative and better way of investing our money in our 401k. We believe risk should
-			be measured and controlled ensuring that we hold the optimal amount of stocks (volatile!) and bonds
-			(stable) depending on the market conditions.</p>
-			<p>We developed an algorithm based on proven risk management strategies utilized by complex hedge
-			fund managers worldwide. We believe in its ability to control the ups and downs of the market while
-			also giving us a good return over the long run.</p>
-			<p>We will give monthly rebalance “blueprints” in the form of an email to all subscribers.</p>
+			<p>We started MSFT401k.com because we couldn’t find a decent way to invest our own money. We are setting out to build a product that we want first, and we think it will help friends and coworkers.</p>
+			<p>Advisors push one type of investment strategy for 401ks: passive portfolios that require investors to select a level of risk as if more risk guarantees more reward.  But, it doesn't.  More risk means more risk -- remember 2008?</p>
+			<p>We believe in an alternate and better way of investing money in our 401k. We believe risk should be measured and controlled ensuring that we hold the optimal amount of stocks (volatile!) and bonds (stable) depending on market conditions.</p>
+			<p>Our algorithm is based on proven risk management strategies utilized by complex hedge fund managers worldwide. We believe in its ability to control the ups and downs of the market while also giving us a solid, steady return over the long run.  And, or course, we use it ourselves.</p>
 		</div>
 	</div>
 

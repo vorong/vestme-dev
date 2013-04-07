@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>msft401k</title>
+  <title>MSFT401k</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <script src="http://code.jquery.com/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
   <%= csrf_meta_tags %>
 
   <script type="text/javascript">
-  	var isiDevice = navigator.userAgent.match(/iPad|iPhone|iPod/g);
-  	if (isiDevice != null) { 
-  		document.write('<meta name="viewport" content="width=840, user-scalable=no">')
+  	var isAndroidOriDevice = navigator.userAgent.match(/iPad|iPhone|iPod|Android/g);
+  	if (isAndroidOriDevice != null) { 
+  		document.write('<meta name="viewport" content="width=840, user-scalable=no" />');
   	}
   	else {
   		//
   	}
 
-  	var isWP7Device = navigator.userAgent.match(/Windows Phone OS 7/g);
-  	if (isWP7Device != null) { 
+  	var isWPDevice = navigator.userAgent.match(/Windows Phone/g);
+  	if (isWPDevice != null) { 
   		$(function() {
 	      var pElements = document.getElementsByTagName("p");
 	      for (i=0; i<pElements.length; i++) {
