@@ -9,6 +9,8 @@ body {
 	font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;
 }
 
+p { line-height: 170%; }
+
 #logo { 
 	width: 150px; 
 	height: 75px; 
@@ -35,7 +37,7 @@ body {
 }
 
 #header { 
-	background-color: white;
+	background-color: #F8F8F8;
 	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 	/* slide-away styling */
 	-webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
@@ -65,12 +67,12 @@ body {
 	background-color: #017890; 
 	color: white; 
 	/* text-shadow: black 0.1em 0.1em 0.2em; */
-	padding: 85px 0px 20px 0px; 
+	padding: 85px 0px 100px 0px; 
 	display: block;
 	width: 100%;
 	position: fixed;
 	z-index: 1;
-	
+	ul { margin: 27px 0px 25px 0px; line-height: 160%; /*line-height: 125%;*/ }
 }
 
 @media screen and (max-device-width: 480px) { 
@@ -79,14 +81,14 @@ body {
 }
 
 #main { 
-	background-color: white; 
+	background-color: #F8F8F8; 
 	padding: 10px 0px 0px 0px; 
 	z-index: 5; 
 	display: block;
 	min-width: 800px;
 	width: 100%;
 	position: absolute;
-	margin-top: 435px;
+	margin-top: 485px;
 	/* slide-away styling */
 	-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -2px 15px 0px;
 	background-attachment: scroll;
@@ -100,7 +102,7 @@ body {
 }
 
 #main-terms { 
-	background-color: white; 
+	background-color: #F8F8F8; 
 	padding: 10px 0px 0px 0px; 
 	z-index: 5; 
 	display: block;
