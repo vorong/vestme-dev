@@ -1,13 +1,14 @@
 <%= render 'layouts/header_home' %>
 
 <div id="poster">
+	<div id="header-background"></div>
 	<div class="content">
-		<h1 style="font-size: 255%;">FREE! Unlock the potential of your 401k!</h1>
-		<h2 style="font-size: 155%; margin-top: 10px; margin-bottom: 30px; font-weight: normal;">Invest in your Microsoft 401k with reduced volatility and higher returns</h2>
+		<h1 style="font-size: 250%;">Unlock the potential of your 401k for free!</h1>
+		<h2 style="font-size: 155%; margin-top: 10px; margin-bottom: 30px; font-weight: normal;">Invest in your Microsoft 401k with higher returns and reduced volatility.</h2>
 		<div id="poster-blurb">
 			<div id="poster-bullets" style="width: 400px; font-size: 120%; font-weight: normal; margin-bottom: -10px; float: left;">
 				<ul>
-					<li>Reduced volatility; higher returns</li>
+					<li>Higher returns, reduced volatility</li>
 					<li>Tailor-made for the Microsoft 401k Plan</li>
 					<li>Just 5 minutes a quarter</li>
 				</ul>
@@ -15,7 +16,7 @@
 			<div id="poster-bullets" style="width: 400px; font-size: 120%; font-weight: normal; margin-bottom: -10px; float: left;">
 				<ul>
 					<li>We never ask for personal information</li>
-					<li>Free monthly investment tips</li>
+					<li>Monthly investment tips</li>
 					<li>Did we mention it was FREE!</li>
 				</ul>
 			</div>
@@ -24,8 +25,7 @@
 
 		<% if (notice =~ /SIGNUP_ERROR/) == 0 %>
 		<div class="error-div">
-			<% if notice == "SIGNUP_ERROR_EMAIL_EMPTY" %><%= "The email field cannot be left blank." %>
-			<% elsif notice == "SIGNUP_ERROR_EMAIL_INVALID" %><%= "This service is only available to people with an @microsoft.com email address." %>
+			<% if notice == "SIGNUP_ERROR_EMAIL_EMPTY" %><%= "Enter your email address to sign up." %>
 			<% elsif notice == "SIGNUP_ERROR_UNKNOWN" %><%= "Something unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
 			<% else %><%= "Something superbly unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
 			<% end %>
@@ -39,7 +39,7 @@
 		    <%= f.text_field :email, 
 		    :id => "user_email",
 		    :class => "form-text-field",
-		    :placeholder => "enter your @microsoft email",
+		    :placeholder => "enter your email",
 		    :value => params[:email] %><%= f.submit "Sign Up!", 
 		    	:class => "form-button" %>
 		  </div>
@@ -62,21 +62,23 @@
 	<div class="content">
 		<div class="main-section" id="section-why">
 			<h2>Why MSFT401k</h2>
-			<p>You're probably already contributing money into your Microsoft 401k.  And if you're like most people we talked to, you probably set up the contribution amount a long time ago and hardly look at it, if ever!  But you can do better &mdash; and in the long run, it makes a huge difference!</p>
+			<p>You're probably already contributing money into your Microsoft 401k.  If you're like most people we talked to, you set up the contribution amount a long time ago and hardly look at it, if ever!  But you can do better in just 5 minutes a quarter.</p>
 			<p style="font-style: italic; font-size: 80%;">P.S.  If you're not already contributing money to your 401k, you should strongly consider it to save for retirement and take advantage of the <a href="http://careers.microsoft.com/careers/en/us/benefits-and-perks.aspx">401k match benefit</a> offered by Microsoft.</p>
 			<h3>Why It Matters</h3>
-			<p>You've probably seen a chart like this before, but let's break it down one more time.  With some standard parameters<sup>*</sup>, the difference between annual returns of 5% and 6% is more than half a million dollars, which is an increase of over 25%!</p>
-			<img width="800" src="assets/401kCompoundGrowth.png" alt="What a Difference 1% Makes" />
-			<p style="font-style: italic; font-size: 80%;">* Parameters: starting today out of college, $100k salary, 6% contribution to 401k, and 3% yearly salary increase.</p>
+			<p>With some standard parameters<sup>*</sup>, the difference between annual returns of 5% and 6% is more than half a million dollars, which is an increase of over 25%!</p>
+			<div>
+				<img width="800" src="assets/401kCompoundGrowth.png" alt="What a Difference 1% Makes" />
+				<br /><span style="font-style: italic; font-size: 80%;">* Parameters: starting today out of college, $100k salary, 6% contribution to 401k, and 3% yearly salary increase.</span>
+			</div>
 			<h3>Here's Where We Come In</h3>
 			<p>We help you get the most out of your 401k.  We apply proven risk management strategies utilized by complex hedge fund managers worldwide to the investment options available in the Microsoft 401k Plan.  That means you get higher returns with less volatility.  Get ready for the caviar!</p>
 		</div>
-		<div class="main-section" id="section-how">
+		<div class="main-section" id="section-how" style="margin-top: -20px;">
 			<h2>How It Works</h2>
-			<p>You've probably heard about the difference between stocks and bonds, and in particular that stocks are "risker." Well, generally speaking, that is true, and that's a core part of how this works...</p>
-			<p>First, we measure and track market risk.  Then, when the market risk is high, we put more money into bonds &mdash; this is to protect you against a stock market crash, like in 2008.  When market risk is low, we put more money into stocks &mdash; this is so you maximize gains when the stock market is doing well.  And the extra secret sauce: we tailor fit it to the investment options available under the Microsoft 401k plan.</p>
+			<p>You've probably heard about the difference between stocks and bonds, particularly that stocks are "risker." Generally speaking, that is true, and that's a core part of how this works...</p>
+			<p>We measure and track market risk and adjust allocations to get higher returns with less volatility.  When market risk is high, we put more money into bonds &mdash; to protect you against a stock market crash, like in 2008.  When market risk is low, we put more money into stocks &mdash; to maximize gains when the stock market is doing well.  The extra secret sauce: we tailor fit it to the investment options available under the Microsoft 401k plan.</p>
 			<h3>What Do I Do</h3>
-			<p>It's so easy!  Every quarter, we'll send you our recommendation for allocations in your 401k to maximize performance and minimize risk along with detailed <a href="stepbystep">step-by-step instructions</a>.  But, you don't have to give us your login information or access to your hard-earned cash.  You log in and rebalance your 401k by yourself so you're always 100% in control.</p>
+			<p>It's easy!  Every quarter, we'll send you our recommendation for allocations in your 401k to maximize performance and minimize risk along with detailed <a href="stepbystep">step-by-step instructions</a>.  But, you don't have to give us your login information or access to your hard-earned cash.  You log in and rebalance your 401k by yourself so you're always 100% in control.</p>
 			<div class="two-column-div two-column-margin">
 				<img src="assets/Rebalance.png" alt="Rebalance" />
 				<br /><span style="font-style: italic; font-size: 80%;">Rebalance</span>
@@ -86,7 +88,6 @@
 				<br /><span style="font-style: italic; font-size: 80%;">Enter Percentages</span>
 			</div>
 			<div class="clear-div"></div>
-			<p>See the full <a href="stepbystep">Step-by-Step Instructions</a>.</p>
 		</div>
 		<div class="main-section" id="section-returns">
 			<h2>Our Returns</h2>
@@ -96,7 +97,6 @@
 		<div class="main-section" id="section-vision">
 			<h2>Vision</h2>
 			<p>We started MSFT401k.com because we couldn’t find a decent way to invest our own money. We are setting out to build a product that we want first, and we think it will help friends and coworkers.</p>
-			<p>Advisors push one type of investment strategy for 401ks: passive portfolios that require investors to select a level of risk as if more risk guarantees more reward.  But, it doesn't.  More risk means more risk &mdash; remember 2008?</p>
 			<p>We believe in an alternate and better way of investing money in our 401k. We believe risk should be measured and controlled ensuring that we hold the optimal amount of stocks (volatile!) and bonds (stable) depending on market conditions.  And, of course, we use it ourselves.</p>
 		</div>
 		<div class="main-section" id="section-who">

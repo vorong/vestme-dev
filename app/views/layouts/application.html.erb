@@ -17,12 +17,35 @@
   <%= csrf_meta_tags %>
 
   <script type="text/javascript">
+  	/*
+  	function setRightShadow() {
+  		var currentShadow = $("#main-terms").css("boxShadow");
+  		var newShadowWidthVal = window.innerWidth - 40;
+  		var currentShadowWidth = currentShadow.match(/\) [0-9]+px/);
+  		if (window.innerWidth <= 785) {
+  			newShadowWidthVal = 10000;
+  		}
+  		if (currentShadowWidth != null) {
+	  		$("#main-terms").css("boxShadow", currentShadow.replace(currentShadowWidth, ") " + newShadowWidthVal + "px"));
+  		}
+  		else {
+  			currentShadowWidth = currentShadow.match(/, [0-9]+px/);
+	  		$("#main-terms").css("boxShadow", currentShadow.replace(currentShadowWidth, ", " + newShadowWidthVal + "px"));
+  		}
+  	}
+
+  	$(window).resize(function() {
+  		$("#main-terms")[0].innerHTML = window.innerWidth + " " + $("#main-terms")[0].innerHTML;
+  		setRightShadow();
+	});
+	*/
+
   	var isiDevice = navigator.userAgent.match(/iPad|iPhone|iPod/g);
   	if (isiDevice != null) { 
   		document.write('<meta name="viewport" content="width=840, user-scalable=no" />');
   	}
   	else {
-  		//
+  		//document.write('<meta name="viewport" user-scalable=no" />');
   	}
 
   	var isWPDevice = navigator.userAgent.match(/Windows Phone/g);
@@ -43,77 +66,10 @@
 	    });  		
   	}
   </script>
-
-  <!-- SlidesJS Required: These styles are required if you'd like a responsive slideshow -->
-  <style>
-    /* Prevent the slideshow from flashing on load */
-    #slides {
-      display: none
-    }
-
-    /* Center the slideshow */
-    .container {
-      margin: 0 auto
-    }
-
-    /* Show active item in the pagination */
-    .slidesjs-pagination .active {
-      color:red;
-    }
-
-	#slides .slidesjs-container {
-	  margin-bottom:10px;
-	}
-
-	#slides .slidesjs-previous {
-	  margin-right: 5px;
-	  float:left;
-	}
-	#slides .slidesjs-next {
-	  margin-right: 5px;
-	  float:left;
-	}
-
-	.slidesjs-pagination {
-	    margin:6px 0 0;
-	    float: right;
-	    list-style: none;
-	}
-
-	.slidesjs-pagination li {
-	    float: left;
-	    margin: 0 1px;
-	}
-
-	.slidesjs-pagination li a {
-	    display: block;
-	    width: 13px;
-	    height: 0;
-	    padding-top: 13px;
-	    background-image: url(assets/chartcarousel/pagination.png);
-	    background-position: 0 0;
-	    float: left;
-	    overflow: hidden;
-	}
-
-	.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
-
-	.slidesjs-pagination li a:hover { background-position: 0 -26px }
-
-	/*
-	#slides a:link, #slides a:visited { color: #333 }
-
-	#slides a:hover, #slides a:active { color: #9e2020 }
-	*/
-    /* Media quires for a responsive layout */
-      .container {
-        width: 800px
-      }
-  </style>
-  <!-- SlidesJS Required: -->
-
 </head>
 <body onload="handle_hash();">
-<%= yield %>
+	<div id="body-div">
+		<%= yield %>
+	</div>
 </body>
 </html>

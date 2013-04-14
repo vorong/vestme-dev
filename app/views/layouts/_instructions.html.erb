@@ -1,24 +1,78 @@
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px;"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 1: Log into your Microsoft 401k account at <a href="http://www.401k.com">http://www.401k.com</a>.</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step1.png" alt="Step 1" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px;"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 2: If you have multiple relationships with Fidelity, choose Microsoft Benefits.</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step2.png" alt="Step 2" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px;"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 3: Select your Microsoft 401k Plan account.</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step3.png" alt="Step 3" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px;"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 4: On the account summary page, click 'Change Investments' in the menu on the left.</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step4.png" alt="Step 4" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px;"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 5: Click 'Rebalance.'</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step5.png" alt="Step 5" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px; border: 1px solid #DDDDDD"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 6: Click 'Start Your Rebalance.'</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step6.png" alt="Step 6" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px; border: 1px solid #DDDDDD"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 7: Enter your rebalance percentages and click 'Begin Rebalance.'</h4>
-<p>Look for the email from <a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a> at the end of every month.  In the email, you will see our recommended asset allocation for the Microsoft 401k Plan.</p>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step7.png" alt="Step 7" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px; border: 1px solid #DDDDDD"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 8: Choose 'Rebalance my account now, one time' and click 'Next.'</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step8.png" alt="Step 8" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px; border: 1px solid #DDDDDD"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 9: Read the electronic prospectus for any new investments and click 'Continue.'</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step9.png" alt="Step 9" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px; border: 1px solid #DDDDDD"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 10: Review the percentages and click 'Submit.'</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step10.png" alt="Step 10" /></div></div>
-<div style="background-color: #FFFFFF; padding: 7px 30px 30px 30px; margin: 30px 0px; border: 1px solid #DDDDDD;"><h4 style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif;">Step 11: You're done!  At the end, you'll see a confirmation page.</h4>
-<div><img src="http://www.msft401k.com/assets/stepbystep/Step11.png" alt="Step 11" /></div></div>
+<script>
+function scroll_to_top(){
+	$("html, body").animate({scrollTop: 0}, 1000);
+}
+function top_link_scroll(link_target) {
+	if (link_target == "") return;
+	$("html, body").animate(
+		{ scrollTop: $('#section-' + link_target).offset().top - 100 }, 1000);
+}
+	function handle_hash() {
+		top_link_scroll(window.location.hash.substring(1));
+	}
+$("#navbar a").click(function(event) {
+  event.preventDefault();
+});
+</script>
 
+<br /><br />
+We'll walk you through updating your 401k investments in two parts: 1) <a  href="#" onclick="top_link_scroll('current')">rebalancing your current investments</a> and 2) <a  href="#" onclick="top_link_scroll('future')">setting allocations for future contributions</a>.
+
+<h2 id="section-current">Rebalance Current Investments</h2>
+<div class="white-box">
+	<h3>Step 1: Log into your Microsoft 401k account at <a href="http://www.401k.com">http://www.401k.com</a>.</h3>
+	<img width="740" src="assets/stepbystep/Step1.png" alt="Step 1" />
+</div>
+<div class="white-box"><h3>Step 2: If you have multiple relationships with Fidelity, choose Microsoft Benefits.
+</h3>
+	<img width="740" src="assets/stepbystep/Step2.png" alt="Step 2" />
+</div>
+<div class="white-box">
+	<h3>Step 3: Select your Microsoft 401k Plan account.</h3>
+	<img width="740" src="assets/stepbystep/Step3.png" alt="Step 3" />
+</div>
+<div class="white-box">
+	<h3>Step 4: On the account summary page, click 'Change Investments' in the menu on the left.</h3>
+	<img width="740" src="assets/stepbystep/Step4.png" alt="Step 4" />
+</div>
+<div class="white-box">
+	<h3>Step 5: Click 'Rebalance.'</h3>
+	<img width="740" src="assets/stepbystep/Step5.png" alt="Step 5" />
+</div>
+<div class="white-box">
+	<h3>Step 6: Click 'Start Your Rebalance.'</h3>
+	<img width="740" src="assets/stepbystep/Step6.png" alt="Step 6" />
+</div>
+<div class="white-box">
+	<h3>Step 7: Enter the percentages sent in the email from <a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a> and click 'Begin Rebalance.'</h3>
+	<img width="740" src="assets/stepbystep/Step7.png" alt="Step 7" />
+</div>
+<div class="white-box">
+	<h3>Step 8: Choose 'Rebalance my account now, one time' and click 'Next.'</h3>
+	<img width="740" src="assets/stepbystep/Step8.png" alt="Step 8" />
+</div>
+<div class="white-box">
+	<h3>Step 9: Read the electronic prospectus for any new investments and click 'Continue.'</h3>
+	<img width="740" src="assets/stepbystep/Step9.png" alt="Step 9" />
+</div>
+<div class="white-box">
+	<h3>Step 10: Review the percentages and click 'Submit.'</h3>
+	<img width="740" src="assets/stepbystep/Step10.png" alt="Step 10" />
+</div>
+<div class="white-box">
+	<h3>Step 11: You're done!  At the end, you'll see a confirmation page.</h3>
+	<img width="740" src="assets/stepbystep/Step11.png" alt="Step 11" />
+</div>
+<h2 id="section-future">Set Future Contributions</h2>
+<div class="white-box">
+	<h3>Step 1: Log into your Microsoft 401k account at <a href="http://www.401k.com">http://www.401k.com</a>.</h3>
+	<img width="740" src="assets/stepbystep/Step1.png" alt="Step 1" />
+</div>
+<div class="white-box"><h3>Step 2: If you have multiple relationships with Fidelity, choose Microsoft Benefits.
+</h3>
+	<img width="740" src="assets/stepbystep/Step2.png" alt="Step 2" />
+</div>
+<div class="white-box">
+	<h3>Step 3: Select your Microsoft 401k Plan account.</h3>
+	<img width="740" src="assets/stepbystep/Step3.png" alt="Step 3" />
+</div>

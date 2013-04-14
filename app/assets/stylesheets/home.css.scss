@@ -4,10 +4,14 @@
 
 
 body {
+	background-color: #017890; 
 	margin: 0px; 
 	padding: 0px; 
 	font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;
+	overflow-x: hidden; 
 }
+
+#body-div {	overflow-x: hidden; width: 100%; max-width: 100%; }
 
 p { line-height: 170%; }
 
@@ -29,7 +33,7 @@ p { line-height: 170%; }
 
 #navbar { 
 	width: 650px; 
-	height: 75px; 
+	height: 80px; 
 	display: table-cell; 
 	vertical-align: middle; 
 	text-align: right;
@@ -37,7 +41,8 @@ p { line-height: 170%; }
 }
 
 #header { 
-	background-color: #F8F8F8;
+	background-color: #FFFFFF;
+	background: rgba(255,255,255,0.9);
 	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 	/* slide-away styling */
 	-webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
@@ -63,16 +68,19 @@ p { line-height: 170%; }
 	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 }
 
-#poster { 
+#header-background { background-color: white; height: 80px; width: 100%; }
+
+#poster {
 	background-color: #017890; 
 	color: white; 
 	/* text-shadow: black 0.1em 0.1em 0.2em; */
-	padding: 85px 0px 100px 0px; 
+	padding: 0px 0px 100px 0px; 
 	display: block;
 	width: 100%;
 	position: fixed;
 	z-index: 1;
 	ul { margin: 27px 0px 25px 0px; line-height: 160%; /*line-height: 125%;*/ }
+	h1 { padding-top: 12px; }
 }
 
 @media screen and (max-device-width: 480px) { 
@@ -81,7 +89,8 @@ p { line-height: 170%; }
 }
 
 #main { 
-	background-color: #F8F8F8; 
+	overflow: hidden; 
+	background-color: #F5F5F5; 
 	padding: 10px 0px 0px 0px; 
 	z-index: 5; 
 	display: block;
@@ -90,36 +99,32 @@ p { line-height: 170%; }
 	position: absolute;
 	margin-top: 485px;
 	/* slide-away styling */
-	-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -2px 15px 0px;
+	-webkit-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25);
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-origin: padding-box;
-	border-bottom-color: 
-	rgba(0, 0, 0, 0.796875);
-	border-bottom-style: solid;
-	border-bottom-width: 0px;
-	box-shadow: rgba(0, 0, 0, 0.246094) 0
 }
 
 #main-terms { 
-	background-color: #F8F8F8; 
+	background-color: #F5F5F5; 
 	padding: 10px 0px 0px 0px; 
 	z-index: 5; 
 	display: block;
 	min-width: 800px;
 	width: 100%;
 	position: absolute;
-	margin-top: 190px;
+	margin-top: 200px;
 	/* slide-away styling */
-	-webkit-box-shadow: rgba(0, 0, 0, 0.246094) 0px -2px 15px 0px;
+	/*
+	-webkit-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25), 15px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25), 15px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	*/
+	box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25), 10000px -15px 15px -13px rgba(0, 0, 0, 0.25);
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-origin: padding-box;
-	border-bottom-color: 
-	rgba(0, 0, 0, 0.796875);
-	border-bottom-style: solid;
-	border-bottom-width: 0px;
-	box-shadow: rgba(0, 0, 0, 0.246094) 0
 }
 
 #footer { 
@@ -164,7 +169,7 @@ p { line-height: 170%; }
 	-webkit-border-radius: 0px;
 }
 
-.signup-form { margin-top: 0em; }
+.signup-form { margin-top: 5px; }
 
 .three-column-div { 
 	width: 230px; 
@@ -237,7 +242,8 @@ h3, h4, h5 { font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-ser
 
 .error-div {
 	color: yellow;
-	font-weight: bold;
+	font-weight: normal;
+	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 }
 
 footer a {
@@ -249,13 +255,22 @@ footer a:hover, a:active {
 	color: #FFFFFF;
 }
 
-a {
+header a {
 	text-decoration: none;
 	color: #F08E64;
 }
 
-a:hover, a:active {
+header a:hover, a:active {
 	color: #67AEBC;
+}
+
+a {
+	text-decoration: none;
+	color: #DB784D;
+}
+
+a:hover, a:active {
+	color: #579FAD;
 }
 
 #navbar {
@@ -267,3 +282,9 @@ a:hover, a:active {
 	margin: 0px 0px -100px 0px;
 }
 
+.white-box {
+	background-color: #FFFFFF; 
+	padding: 7px 30px 30px 30px; 
+	margin: 30px 0px; 
+	border: 1px solid #BBBBBB;
+}

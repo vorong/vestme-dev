@@ -1,6 +1,7 @@
 <%= render 'layouts/header_other' %>
 
 <div id="poster">
+	<div id="header-background"></div>
 	<div class="content">
 		<h1>Congratulations!</h1>
 	</div>
@@ -9,8 +10,8 @@
 <div id="main-terms">
 	<div class="content">
         <h2>Get excited! You're Signed Up!!</h2>
-        <%= render 'layouts/signupblurb' %>
-        <%= render 'layouts/instructions' %>
+        <p>You're all set.  We just sent you an email with next steps to <%= @user.email %>.</p>
+        <p>Questions? E-mail us: <a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.</p>
 	</div>
 
     <%= render 'layouts/footer' %>
