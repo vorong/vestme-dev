@@ -11,7 +11,7 @@
 class User < ActiveRecord::Base
 	attr_accessible :email
 
-	VALID_EMAIL_REGEX = /\A[\w+\-.]+(@microsoft|@gmail)\.com\z/i
+	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	
 	before_save { |user| user.email = email.downcase }
 
