@@ -9,7 +9,95 @@
 
 <div id="main-terms">
 	<div class="content instructions">
-		<%= render 'layouts/instructions' %>
+		<script>
+		function scroll_to_top(){
+			$("html, body").animate({scrollTop: 0}, 1000);
+		}
+		function top_link_scroll(link_target) {
+			if (link_target == "") return;
+			$("html, body").animate(
+				{ scrollTop: $('#section-' + link_target).offset().top - 100 }, 1000);
+		}
+			function handle_hash() {
+				top_link_scroll(window.location.hash.substring(1));
+			}
+		$("#navbar a").click(function(event) {
+		  event.preventDefault();
+		});
+		</script>
+
+		<h2 id="section-current">Rebalance Current Investments</h2>
+		<div class="white-box">
+			<h3>Step 1: log into <a href="http://www.401k.com">http://www.401k.com</a></h3>
+			<img src="assets/stepbystep/Step1.png" alt="Step 1" />
+		</div>
+		<div class="white-box"><h3>Step 2: choose 'Microsoft Benefits'<sup>*</sup></h3>
+			<img width="740" src="assets/stepbystep/Step2.png" alt="Step 2" />
+			<br /><span style="font-style: italic; font-size: 80%;">* If you have multiple relationships with Fidelity.</span>
+		</div>
+		<div class="white-box">
+			<h3>Step 3: click 'Microsoft 401k Plan'</h3>
+			<img width="740" src="assets/stepbystep/Step3.png" alt="Step 3" />
+		</div>
+		<div class="white-box">
+			<h3>Step 4: click 'Change Investments'</h3>
+			<img width="740" src="assets/stepbystep/Step4.png" alt="Step 4" />
+		</div>
+		<div class="white-box">
+			<h3>Step 5: click 'Rebalance'</h3>
+			<img width="740" src="assets/stepbystep/Step5.png" alt="Step 5" />
+		</div>
+		<div class="white-box">
+			<h3>Step 6: click 'Start Your Rebalance'.</h3>
+			<img width="740" src="assets/stepbystep/Step6.png" alt="Step 6" />
+		</div>
+		<div class="white-box">
+			<h3>Step 7: enter percentages sent in email from <a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a> and click 'Begin Rebalance'</h3>
+			<img width="740" src="assets/stepbystep/Step7.png" alt="Step 7" />
+		</div>
+		<div class="white-box">
+			<h3>Step 8: choose 'Rebalance my account now, one time' and click 'Next'</h3>
+			<img width="740" src="assets/stepbystep/Step8.png" alt="Step 8" />
+		</div>
+		<div class="white-box">
+			<h3>Step 9: read prospectus documents and click 'Continue'</h3>
+			<img width="740" src="assets/stepbystep/Step9.png" alt="Step 9" />
+		</div>
+		<div class="white-box">
+			<h3>Step 10: review the percentages and click 'Submit'</h3>
+			<img width="740" src="assets/stepbystep/Step10.png" alt="Step 10" />
+		</div>
+		<div class="white-box">
+			<h3>Step 11: you're done!</h3>
+			<img width="740" src="assets/stepbystep/Step11.png" alt="Step 11" />
+		</div>
+		<h2 id="section-future">Set Future Contributions</h2>
+		<p>We'll help you set your future contributions to the <a href="https://workplaceservices200.fidelity.com/mybenefits/savings2/performance/fundinfo?plan=89766&amp;fundnbr=2013">Fidelity&reg; Institutional Money Market</a> fund, which is an extremely low risk fund essentially equivalent to cash.  You can think of this as putting your money in a temporary holding pen until the next time you rebalance your 401k.  You only need to do this once (i.e. the first time you rebalance).</p>
+		<div class="white-box">
+			<h3>Step 1: click 'Investments Elections'<sup>*</sup></h3>
+			<img width="740" src="assets/stepbystep/FutureStep1.png" alt="Step 1 - Future Contributions" />
+			<br /><span style="font-style: italic; font-size: 80%;">* On the 'Change Investments' page after following steps 1-4 of <a href="#" onclick="top_link_scroll('current')">Rebalance Current Investments</a>.</span>
+		</div>
+		<div class="white-box"><h3>Step 2: click 'Select Funds'
+		</h3>
+			<img width="740" src="assets/stepbystep/FutureStep2.png" alt="Step 2 - Future Contributions" />
+		</div>
+		<div class="white-box"><h3>Step 3: set 'FIMM MONEY MKT INST' to 100% and click 'Next'
+		</h3>
+			<img width="740" src="assets/stepbystep/FutureStep3.png" alt="Step 3 - Future Contributions" />
+		</div>
+		<div class="white-box"><h3>Step 4: read prospectus documents and click 'Next'
+		</h3>
+			<img width="740" src="assets/stepbystep/FutureStep4.png" alt="Step 4 - Future Contributions" />
+		</div>
+		<div class="white-box"><h3>Step 5: review the percentages and click 'Submit'
+		</h3>
+			<img width="740" src="assets/stepbystep/FutureStep5.png" alt="Step 5 - Future Contributions" />
+		</div>
+		<div class="white-box"><h3>Step 6: you're done!
+		</h3>
+			<img width="740" src="assets/stepbystep/FutureStep6.png" alt="Step 6 - Future Contributions" />
+		</div>
 	</div>
 
     <%= render 'layouts/footer' %>

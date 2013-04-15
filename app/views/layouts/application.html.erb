@@ -17,29 +17,6 @@
   <%= csrf_meta_tags %>
 
   <script type="text/javascript">
-  	/*
-  	function setRightShadow() {
-  		var currentShadow = $("#main-terms").css("boxShadow");
-  		var newShadowWidthVal = window.innerWidth - 40;
-  		var currentShadowWidth = currentShadow.match(/\) [0-9]+px/);
-  		if (window.innerWidth <= 785) {
-  			newShadowWidthVal = 10000;
-  		}
-  		if (currentShadowWidth != null) {
-	  		$("#main-terms").css("boxShadow", currentShadow.replace(currentShadowWidth, ") " + newShadowWidthVal + "px"));
-  		}
-  		else {
-  			currentShadowWidth = currentShadow.match(/, [0-9]+px/);
-	  		$("#main-terms").css("boxShadow", currentShadow.replace(currentShadowWidth, ", " + newShadowWidthVal + "px"));
-  		}
-  	}
-
-  	$(window).resize(function() {
-  		$("#main-terms")[0].innerHTML = window.innerWidth + " " + $("#main-terms")[0].innerHTML;
-  		setRightShadow();
-	});
-	*/
-
   	var isiDevice = navigator.userAgent.match(/iPad|iPhone|iPod/g);
   	if (isiDevice != null) { 
   		document.write('<meta name="viewport" content="width=840, user-scalable=no" />');

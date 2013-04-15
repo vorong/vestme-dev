@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
 body {
 	background-color: #017890; 
 	margin: 0px; 
@@ -42,7 +41,7 @@ p { line-height: 170%; }
 
 #header { 
 	background-color: #FFFFFF;
-	background: rgba(255,255,255,0.9);
+	background: rgba(255,255,255,0.95);
 	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
 	/* slide-away styling */
 	-webkit-box-shadow: 0 2px 15px rgba(0, 0, 0, 0.25);
@@ -63,23 +62,17 @@ p { line-height: 170%; }
 	z-index: 10;
 }
 
-#header-no-float { 
-	background-color: white;
-	font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;
-}
-
 #header-background { background-color: white; height: 80px; width: 100%; }
 
 #poster {
 	background-color: #017890; 
 	color: white; 
-	/* text-shadow: black 0.1em 0.1em 0.2em; */
 	padding: 0px 0px 100px 0px; 
 	display: block;
 	width: 100%;
 	position: fixed;
 	z-index: 1;
-	ul { margin: 27px 0px 25px 0px; line-height: 160%; /*line-height: 125%;*/ }
+	ul { margin: 27px 0px 25px 0px; line-height: 160%; }
 	h1 { padding-top: 12px; }
 }
 
@@ -90,7 +83,7 @@ p { line-height: 170%; }
 
 #main { 
 	overflow: hidden; 
-	background-color: #F5F5F5; 
+	background-color: #F0F0F0; 
 	padding: 10px 0px 0px 0px; 
 	z-index: 5; 
 	display: block;
@@ -108,7 +101,7 @@ p { line-height: 170%; }
 }
 
 #main-terms { 
-	background-color: #F5F5F5; 
+	background-color: #F0F0F0; 
 	padding: 10px 0px 0px 0px; 
 	z-index: 5; 
 	display: block;
@@ -117,11 +110,9 @@ p { line-height: 170%; }
 	position: absolute;
 	margin-top: 200px;
 	/* slide-away styling */
-	/*
-	-webkit-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25), 15px -15px 15px -13px rgba(0, 0, 0, 0.25);
-	-moz-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25), 15px -15px 15px -13px rgba(0, 0, 0, 0.25);
-	*/
-	box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25), 10000px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	-moz-box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25);
+	box-shadow: -15px -15px 15px -13px rgba(0, 0, 0, 0.25);
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-origin: padding-box;
@@ -284,7 +275,7 @@ a:hover, a:active {
 
 .white-box {
 	background-color: #FFFFFF; 
-	padding: 7px 30px 30px 30px; 
+	padding: 5px 30px 26px 30px; 
 	margin: 30px 0px; 
 	border: 1px solid #BBBBBB;
 }
