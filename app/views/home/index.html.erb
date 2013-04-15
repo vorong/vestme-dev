@@ -26,8 +26,9 @@
 		<% if (notice =~ /SIGNUP_ERROR/) == 0 %>
 		<div class="error-div">
 			<% if notice == "SIGNUP_ERROR_EMAIL_EMPTY" %><%= "Enter your email address to sign up." %>
-			<% elsif notice == "SIGNUP_ERROR_UNKNOWN" %><%= "Something unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
-			<% else %><%= "Something superbly unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
+			<% elsif notice == "SIGNUP_ERROR_EMAIL_INVALID" %><%= "Please enter a valid email address to sign up."%>
+			<% elsif notice == "SIGNUP_ERROR_UNKNOWN" %><%= "Something unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a style="color: white; text-decoration: underline;" href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
+			<% else %><%= "Something superbly unusual happened.  We're looking into it.  Send us an email and tell us what happened: "%><a  style="color: white; text-decoration: underline;" href="mailto:team@MSFT401k.com">team@MSFT401k.com</a>.
 			<% end %>
 		</div>
 		<% elsif %>

@@ -24,4 +24,10 @@ class UsersController < ApplicationController
       end
     end
   end
+
+  # GET /users/1
+  def show
+    @user = User.find_by_id(params[:id])
+    UserMailer.welcome_email(@user.email).deliver
+  end
 end
