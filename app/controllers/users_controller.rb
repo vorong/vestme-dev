@@ -8,7 +8,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         # Tell the UserMailer to send a welcome Email after save
-        UserMailer.welcome_email(@user).deliver
+        UserMailer.welcome_email(@user.email).deliver
 
         format.html { render action: "success" }
         format.json { render json: @user, status: :created, location: @user }
