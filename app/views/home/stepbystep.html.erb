@@ -1,5 +1,25 @@
 <%= render 'layouts/header_other' %>
 
+<script>
+	function scroll_to_top(){
+		$("html, body").animate({scrollTop: 0}, 1000);
+	}
+
+	function top_link_scroll(link_target) {
+		if (link_target == "") return;
+		$("html, body").animate(
+			{ scrollTop: $('#section-' + link_target).offset().top - 100 }, 1000);
+	}
+
+	function handle_hash() {
+		top_link_scroll(window.location.hash.substring(1));
+	}
+
+	$("#navbar a").click(function(event) {
+	  event.preventDefault();
+	});
+</script>
+
 <div id="poster">
 	<div id="header-background"></div>
 	<div class="content">
@@ -9,22 +29,7 @@
 
 <div id="main-terms">
 	<div class="content instructions">
-		<script>
-		function scroll_to_top(){
-			$("html, body").animate({scrollTop: 0}, 1000);
-		}
-		function top_link_scroll(link_target) {
-			if (link_target == "") return;
-			$("html, body").animate(
-				{ scrollTop: $('#section-' + link_target).offset().top - 100 }, 1000);
-		}
-			function handle_hash() {
-				top_link_scroll(window.location.hash.substring(1));
-			}
-		$("#navbar a").click(function(event) {
-		  event.preventDefault();
-		});
-		</script>
+
 
 		<h2 id="section-current">Rebalance Current Investments</h2>
 		<div class="white-box">

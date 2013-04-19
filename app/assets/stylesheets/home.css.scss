@@ -12,8 +12,6 @@ body {
 
 #body-div {	overflow-x: hidden; width: 100%; max-width: 100%; }
 
-p { line-height: 170%; }
-
 #logo { 
 	width: 150px; 
 	height: 75px; 
@@ -72,7 +70,7 @@ p { line-height: 170%; }
 	width: 100%;
 	position: fixed;
 	z-index: 1;
-	ul { margin: 27px 0px 25px 0px; line-height: 160%; }
+	ul { margin: 27px 0px 25px 0px; line-height: 160%; font-size: 100%; }
 	h1 { padding-top: 12px; }
 }
 
@@ -98,6 +96,11 @@ p { line-height: 170%; }
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-origin: padding-box;
+	font-size: 110%;
+	p { line-height: 190%; }
+	h2 { margin-top: 70px; margin-bottom: 30px; }
+	h2:first-of-type { margin-top: 40px; }
+	h3 { margin-top: 50px; margin-bottom: 20px; }
 }
 
 #main-terms { 
@@ -116,6 +119,11 @@ p { line-height: 170%; }
 	background-attachment: scroll;
 	background-clip: border-box;
 	background-origin: padding-box;
+	font-size: 110%;
+	p { line-height: 190%; }
+	h2 { margin-top: 70px; margin-bottom: 30px; }
+	h2:first-of-type { margin-top: 40px; }
+	h3 { margin-top: 50px; margin-bottom: 20px; }
 }
 
 #footer { 
