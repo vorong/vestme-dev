@@ -10,4 +10,9 @@ class UserMailer < ActionMailer::Base
     @url  = "http://www.MSFT401k.com"
     mail(:to => email, :subject => "We Are Live!")
   end
+
+  def custom_note_email(email)
+    @url  = "http://www.MSFT401k.com"
+    mail(:to => email, :subject => "Frequently Asked Questions")
+  end
 end
