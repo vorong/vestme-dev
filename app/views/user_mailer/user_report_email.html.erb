@@ -12,7 +12,7 @@
     			<td>created_at</td>
     			<td>updated_at</td>
     		</tr>
-    		<%= User.find(:all, :order => "created_at").each do |user| %>
+    		<% User.find(:all, :order => "created_at").each do |user| %>
     		<tr>
     	 		<td><%= user.id.to_s %></td>
     	 		<td><%= user.email.to_s %></td>
