@@ -5,19 +5,19 @@
   </head>
   <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
     <div id="main">
-    	<table>
+    	<table style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; border: 1px solid black; padding: 0px; border-spacing: 0; border-collapse: collapse;">
     		<tr>
-    			<td>id</td>
-    			<td>email</td>
-    			<td>created_at</td>
-    			<td>updated_at</td>
+    			<td style="border: 1px solid black; padding: 3px;">id</td>
+    			<td style="border: 1px solid black; padding: 3px;">email</td>
+    			<td style="border: 1px solid black; padding: 3px;">created_at</td>
+    			<td style="border: 1px solid black; padding: 3px;">updated_at</td>
     		</tr>
     		<% User.find(:all, :order => "created_at").each do |user| %>
     		<tr>
-    	 		<td><%= user.id.to_s %></td>
-    	 		<td><%= user.email.to_s %></td>
-    	 		<td><%= user.created_at.to_s %></td>
-    	 		<td><%= user.updated_at.to_s %></td>
+    	 		<td style="border: 1px solid black; padding: 3px;"><%= user.id.to_s %></td>
+    	 		<td style="border: 1px solid black; padding: 3px;"><%= user.email.to_s %></td>
+    	 		<td style="border: 1px solid black; padding: 3px;"><%= user.created_at.to_s %></td>
+    	 		<td style="border: 1px solid black; padding: 3px;"><%= user.updated_at.to_s %></td>
     	 	</tr>
     		<% end %>
     	</table>
