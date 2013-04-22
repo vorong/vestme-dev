@@ -15,4 +15,9 @@ class UserMailer < ActionMailer::Base
     @url  = "http://www.MSFT401k.com"
     mail(:to => email, :subject => "Frequently Asked Questions")
   end
+
+  def daily_report_email(email)
+    @url  = "http://www.MSFT401k.com"
+    mail(:to => email, :subject => "Daily Report")
+  end
 end

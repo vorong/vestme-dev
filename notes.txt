@@ -1,0 +1,2 @@
+line to send custom_note_email to users:
+User.all.each do |user| UserMailer.custom_note_email(user.email).deliver end
