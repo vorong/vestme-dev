@@ -7,3 +7,7 @@ end
 task :frequent_report => :environment do
 	UserMailer.daily_report_email("gary@voronel.com").deliver
 end
+
+task :user_report => :environment do
+	UserMailer.user_report_email("gary@voronel.com").deliver
+end

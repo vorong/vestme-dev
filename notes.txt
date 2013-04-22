@@ -1,2 +1,5 @@
 line to send custom_note_email to users:
 User.all.each do |user| UserMailer.custom_note_email(user.email).deliver end
+
+output all emails
+User.find(:all, :order => "created_at").each do |user| puts user.id.to_s + "," + user.email + "," + user.created_at.to_s + "," + user.updated_at.to_s end

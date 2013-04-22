@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+  </head>
+  <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
+    <div id="main">
+    	<table>
+    		<tr>
+    			<td>id</td>
+    			<td>email</td>
+    			<td>created_at</td>
+    			<td>updated_at</td>
+    		</tr>
+    		<%= User.find(:all, :order => "created_at").each do |user| %>
+    		<tr>
+    	 		<td><%= user.id.to_s %></td>
+    	 		<td><%= user.email.to_s %></td>
+    	 		<td><%= user.created_at.to_s %></td>
+    	 		<td><%= user.updated_at.to_s %></td>
+    	 	</tr>
+    		<% end %>
+    	</table>
+    </div>
+  </body>
+</html>
