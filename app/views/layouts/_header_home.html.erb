@@ -15,19 +15,17 @@
 
 		<script>
 		function scroll_to_top(){
-			$("html, body").animate({scrollTop: 0}, 1000);
+			event.preventDefault();
+			if ($(window).scrollTop() != 0) $("html, body").animate({scrollTop: 0}, 800);
 		}
 		function top_link_scroll(link_target) {
+			event.preventDefault();
 			if (link_target == "") return;
-			$("html, body").animate(
-				{ scrollTop: $('#section-' + link_target).offset().top - 70 }, 1000);
+			$("html, body").animate({ scrollTop: $('#section-' + link_target).offset().top - 70 }, 800);
 		}
 	  	function handle_hash() {
 	  		top_link_scroll(window.location.hash.substring(1));
   		}
-		$("#navbar a").click(function(event) {
-		  event.preventDefault();
-		});
 		</script>
 
 	</div>
