@@ -7,25 +7,29 @@
 
 		<div id="navbar">
 			<a id="top-link-signup" href="#" onclick="scroll_to_top()">Sign Up</a> |
-			<a id="top-link-why" href="#" onclick="top_link_scroll('why')">Why</a> |
-			<a id="top-link-how" href="#" onclick="top_link_scroll('how')">How</a> |
-			<a id="top-link-returns" href="#" onclick="top_link_scroll('returns')">Returns</a> |
-			<a id="top-link-vision" href="#" onclick="top_link_scroll('vision')">Vision</a>
+			<a id="top-link-why" href="#why" onclick="top_link_scroll('why')">Why</a> |
+			<a id="top-link-how" href="#how" onclick="top_link_scroll('how')">How</a> |
+			<a id="top-link-returns" href="#returns" onclick="top_link_scroll('returns')">Returns</a> |
+			<a id="top-link-vision" href="#vision" onclick="top_link_scroll('vision')">Vision</a>
 		</div>
 
 		<script>
-		function scroll_to_top(){
-			event.preventDefault();
-			if ($(window).scrollTop() != 0) $("html, body").animate({scrollTop: 0}, 800);
-		}
-		function top_link_scroll(link_target) {
-			event.preventDefault();
-			if (link_target == "") return;
-			$("html, body").animate({ scrollTop: $('#section-' + link_target).offset().top - 70 }, 800);
-		}
-	  	function handle_hash() {
-	  		top_link_scroll(window.location.hash.substring(1));
-  		}
+	  	if (isWPDevice != null) {
+	  		// do nothing
+	  	} else {
+			function scroll_to_top(){
+				event.preventDefault();
+				if ($(window).scrollTop() != 0) $("html, body").animate({scrollTop: 0}, 800);
+			}
+			function top_link_scroll(link_target) {
+				event.preventDefault();
+				if (link_target == "") return;
+				$("html, body").animate({ scrollTop: $('#' + link_target).offset().top - 70 }, 800);
+			}
+		  	function handle_hash() {
+		  		top_link_scroll(window.location.hash.substring(1));
+	  		}
+	  	}
 		</script>
 
 	</div>

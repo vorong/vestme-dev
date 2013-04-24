@@ -22,7 +22,7 @@
   		document.write('<meta name="viewport" content="width=840, user-scalable=no" />');
   	}
   	else {
-  		//document.write('<meta name="viewport" user-scalable=no" />');
+  		// do nothing
   	}
 
   	var isWPDevice = navigator.userAgent.match(/Windows Phone/g);
@@ -32,9 +32,17 @@
 	      for (i=0; i<pElements.length; i++) {
 	      	pElements[i].style.fontSize="180%";
 	      }
+	      var olElements = document.getElementsByTagName("ol");
+	      for (i=0; i<olElements.length; i++) {
+	      	olElements[i].style.fontSize="180%";
+	      }
 	      var spanElements = document.getElementsByTagName("span");
 	      for (i=0; i<spanElements.length; i++) {
 	      	spanElements[i].style.fontSize="180%";
+	      }
+	      var h3Elements = document.getElementsByTagName("h3");
+	      for (i=0; i<h3Elements.length; i++) {
+	      	h3Elements[i].style.fontSize="220%";
 	      }
 	      var h4Elements = document.getElementsByTagName("h4");
 	      for (i=0; i<h4Elements.length; i++) {
