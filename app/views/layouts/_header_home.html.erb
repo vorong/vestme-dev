@@ -24,7 +24,7 @@
 			function top_link_scroll(link_target) {
 				event.preventDefault();
 				if (link_target == "") return;
-				$("html, body").animate({ scrollTop: $('#' + link_target).offset().top - 70 }, 800);
+				$("html, body").animate({ scrollTop: $('#' + link_target).offset().top }, 800);
 			}
 		  	function handle_hash() {
 		  		top_link_scroll(window.location.hash.substring(1));
