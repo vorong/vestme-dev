@@ -3,7 +3,17 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(email)
     @url  = "http://www.MSFT401k.com"
+    @user = User.find_by_email(email)
+    @user.welcomed_at = DateTime.current()
+    @user.welcomed_count = @user.welcomed_count + 1
+    @user.save
     mail(:to => email, :subject => "Welcome to MSFT401k!")
+  end
+
+  def first_monthly_email(email)
+    @url  = "http://www.MSFT401k.com"
+    @email = email
+    mail(:to => email, :subject => "MSFT401k - May 2013")
   end
 
   def custom_note_email(email)

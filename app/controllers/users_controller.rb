@@ -27,7 +27,15 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    @user = User.find_by_id(params[:id])
-    UserMailer.welcome_email(@user.email).deliver
+    if (params[:email] == nil)
+      @user = User.find_by_id(params[:id])
+      UserMailer.welcome_email(@user.email).deliver
+    else
+      @user = User.find_by_email(params[:email])
+      UserMailer.welcome_email(@user.email).deliver
+      respond_to do |format|
+        format.html { render action: "resend" }
+      end
+    end
   end
 end

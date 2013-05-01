@@ -6,6 +6,7 @@ Gvodev::Application.routes.draw do
   get "stepbystep" => "home#stepbystep"
   get "faq" => "home#faq"
   get "unsubscribe" => "home#unsubscribe"
+  get "resend" => "home#resend"
 
   root :to => "home#index"
 
