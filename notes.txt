@@ -2,7 +2,7 @@ line to send custom_note_email to users:
 User.all.each do |user| UserMailer.custom_note_email(user.email).deliver end
 
 send to all dev users
-User.find(:all, :status = 4).each do |user| UserMailer.first_monthly_email(user.email).deliver end
+User.where("STATUS = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
 User.all.each do |user| UserMailer.first_monthly_email(user.email).deliver end
 
 output all emails

@@ -13,7 +13,7 @@ class UserMailer < ActionMailer::Base
   def first_monthly_email(email)
     @url  = "http://www.MSFT401k.com"
     @email = email
-    mail(:to => email, :subject => "MSFT401k - May 2013")
+    mail(:to => email, :subject => "MSFT401k - May 2013 Rebalance")
   end
 
   def custom_note_email(email)
