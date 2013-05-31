@@ -13,7 +13,9 @@ class UserMailer < ActionMailer::Base
   def first_monthly_email(email)
     @url  = "http://www.MSFT401k.com"
     @email = email
-    mail(:to => email, :subject => "MSFT401k - May 2013 Rebalance")
+    current_time = Time.parse('2013-06-01 08:30:00') # Time.now
+    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year
+    mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end
 
   def custom_note_email(email)
@@ -29,5 +31,19 @@ class UserMailer < ActionMailer::Base
   def user_report_email(email)
     @url  = "http://www.MSFT401k.com"
     mail(:to => email, :subject => "User Report")
+  end
+
+  def variable_email(email, subject, content)
+    @url  = "http://www.MSFT401k.com"
+    @content = content
+    mail(:to => email, :subject => subject)
+  end
+
+  def regular_monthly_email(email)
+    @url  = "http://www.MSFT401k.com"
+    @email = email
+    current_time = Time.parse('2013-06-01 08:30:00') # Time.now
+    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year
+    mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end
 end
