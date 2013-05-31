@@ -11,7 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130501053841) do
+ActiveRecord::Schema.define(:version => 20130531112417) do
+
+  create_table "allocations", :force => true do |t|
+    t.string   "values"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "group"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

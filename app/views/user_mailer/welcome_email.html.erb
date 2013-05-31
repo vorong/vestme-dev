@@ -11,55 +11,13 @@
         <p>You're smart!  You've taken the first step toward higher returns and reduced volatility for your 401k.</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Get Started Now</h3>
         <p>Update your 401k account now using our <a href="http://www.msft401k.com/stepbystep">step-by-step instructions</a> and this month's allocations.<sup>*</sup>  You should complete this rebalance by <%= Date::MONTHNAMES[current_time.month] + " " + Time.days_in_month(current_time.month).to_s %>.  In the future, we'll send you new allocations on the 1st of every month.  Your next rebalance notification will be on <%= Date::MONTHNAMES[(current_time.month + 2) % 12] %> 1.</p>
-        <h4 style="margin: 20px 0px 5px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 120%;">Allocations</h4>
-        <table style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; border: 1px solid black; padding: 0px; border-spacing: 0; border-collapse: collapse;">
-          <tr>
-            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 2px 2px 6px; text-align: left;">Fund Name</td>
-            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 6px 2px 10px; text-align: left;">Allocation</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left; background-color: #D9D9D9;">VANG INST INDEX PLUS</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right; background-color: #D9D9D9;">9.03%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px;text-align: left;">VANG VAL INDEX INST</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px;text-align: right;">9.33%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left; background-color: #D9D9D9;">VANG SM GR IDX INST</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right; background-color: #D9D9D9;">5.96%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left;">ARTISAN MID CAP</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right;">5.10%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left; background-color: #D9D9D9;">RUSSELL INTL GROWTH</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right; background-color: #D9D9D9;">4.33%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px;text-align: left;">RUSSELL INTL VALUE</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px;text-align: right;">5.05%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left; background-color: #D9D9D9;">PIMCO TOTAL RETURN</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right; background-color: #D9D9D9;">25.84%</td>
-          </tr>
-          <tr>
-            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left;">VANG ST BD IDX IS PL</td>
-            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right;">35.36%</td>
-          </tr>
-          <tr>
-            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 2px 2px 6px; text-align: left;">Total</td>
-            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 6px 2px 10px; text-align: right;">100.00%</td>
-          </tr>
-        </table>
+
+        <%= render 'layouts/allocations' %>
+
         <p style="font-style: italic; font-size: 70%;">* Rebalancing to these allocations may result in a round-trip warning if you have rebalanced your portoflio within the past 30 days.</p>
-        <br /><hr />
-        <div style="font-size: 80%; font-family: ProximaNovaBold, 'Helvetica Neue', Arial, sans-serif;">
-          <p><a href="http://www.msft401k.com/faq">FAQ</a> | <a href="mailto:team@MSFT401k.com">Contact Us</a> | <a href="http://www.msft401k.com/terms">Terms</a> | <a href="http://www.msft401k.com/unsubscribe">Unsubscribe</a></p>          
-          <p>Past performance does not guarantee or imply future success. You cannot assume that profits or gains will be realized or that any opinion made by MSFT401k.com will be profitable. It is recommended that you consult a stockbroker or financial advisor before buying or selling securities, or making any investment decisions.</p>
-        </div>
+
+        <%= render 'layouts/email_footer' %>
+
       </div>
     </div>
   </body>

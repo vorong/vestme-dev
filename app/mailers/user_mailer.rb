@@ -14,7 +14,7 @@ class UserMailer < ActionMailer::Base
     @url  = "http://www.MSFT401k.com"
     @email = email
     current_time = Time.parse('2013-06-01 08:30:00') # Time.now
-    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year
+    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end
 
@@ -43,7 +43,7 @@ class UserMailer < ActionMailer::Base
     @url  = "http://www.MSFT401k.com"
     @email = email
     current_time = Time.parse('2013-06-01 08:30:00') # Time.now
-    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year
+    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end
 end

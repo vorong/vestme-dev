@@ -1,4 +1,6 @@
 Gvodev::Application.routes.draw do
+  resources :allocations
+
   resources :users
 
   get "home/index"
