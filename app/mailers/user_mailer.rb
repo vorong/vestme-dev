@@ -14,11 +14,23 @@ class UserMailer < ActionMailer::Base
   end
 
   def first_monthly_email(email)
+    puts "\n\n\nStarting sending first monthly mail to " + email + " ..."
     @url  = "http://www.MSFT401k.com"
     @email = email
     current_time = Time.now.in_time_zone('America/Los_Angeles')
     month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
+    puts "Finished sending first monthly mail to " + email
+  end
+
+  def regular_monthly_email(email)
+    puts "\n\n\nStarting sending regular monthly mail to " + email + " ..."
+    @url  = "http://www.MSFT401k.com"
+    @email = email
+    current_time = Time.now.in_time_zone('America/Los_Angeles')
+    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
+    mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
+    puts "Finished sending regular monthly mail to " + email
   end
 
   def custom_note_email(email)
@@ -40,13 +52,5 @@ class UserMailer < ActionMailer::Base
     @url  = "http://www.MSFT401k.com"
     @content = content
     mail(:to => email, :subject => subject)
-  end
-
-  def regular_monthly_email(email)
-    @url  = "http://www.MSFT401k.com"
-    @email = email
-    current_time = Time.now.in_time_zone('America/Los_Angeles')
-    month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
-    mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end
 end
