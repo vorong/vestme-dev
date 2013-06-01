@@ -13,7 +13,7 @@ task :user_report => :environment do
 end
 
 task :send_monthly_mails => :environment do
-	current_time = Time.parse('2013-06-01 08:30:00') # Time.now
+	current_time = Time.now
 
 	if current_time.day == 1
 		UserMailer.variable_email("gary@voronel.com","Monthly Email Script Started","").deliver
