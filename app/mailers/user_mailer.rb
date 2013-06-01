@@ -4,8 +4,11 @@ class UserMailer < ActionMailer::Base
   def welcome_email(email)
     @url  = "http://www.MSFT401k.com"
     @user = User.find_by_email(email)
-    @user.welcomed_at = DateTime.current()
+    current_time_utc = Time.now.change(usec: 0)
+    current_time = current_time_utc.in_time_zone('America/Los_Angeles')
+    @user.welcomed_at = current_time
     @user.welcomed_count = @user.welcomed_count + 1
+    @user.wmpt = (current_time.year * 100 + current_time.month)
     @user.save
     mail(:to => email, :subject => "Welcome to MSFT401k!")
   end
@@ -13,7 +16,7 @@ class UserMailer < ActionMailer::Base
   def first_monthly_email(email)
     @url  = "http://www.MSFT401k.com"
     @email = email
-    current_time = Time.now
+    current_time = Time.now.in_time_zone('America/Los_Angeles')
     month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end
@@ -42,7 +45,7 @@ class UserMailer < ActionMailer::Base
   def regular_monthly_email(email)
     @url  = "http://www.MSFT401k.com"
     @email = email
-    current_time = Time.now
+    current_time = Time.now.in_time_zone('America/Los_Angeles')
     month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "MSFT401k - " + month_year + " Rebalance")
   end

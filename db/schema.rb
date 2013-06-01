@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130531112417) do
+ActiveRecord::Schema.define(:version => 20130601210207) do
 
   create_table "allocations", :force => true do |t|
     t.string   "values"
@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(:version => 20130531112417) do
     t.integer  "status",         :default => 0
     t.datetime "welcomed_at"
     t.integer  "welcomed_count", :default => 0
+    t.integer  "wmpt"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

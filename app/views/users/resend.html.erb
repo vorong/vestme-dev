@@ -1,5 +1,5 @@
 <%= render 'layouts/header_other' %>
-<% current_time = Time.now %>
+<% current_time = Time.now.in_time_zone('America/Los_Angeles') %>
 
 <div id="poster">
 	<div id="header-background"></div>
