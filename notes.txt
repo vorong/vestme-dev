@@ -9,5 +9,9 @@ User.all.each do |user| UserMailer.first_monthly_email(user.email).deliver end
 User.find(:all, :order => "created_at").each do |user| puts user.id.to_s + "," + user.email + "," + user.created_at.to_s + "," + user.updated_at.to_s end
 
 #send monthly emails
+User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+
+
 User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt = 201305").each do |user| UserMailer.first_monthly_email(user.email).deliver end
 User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt < 201305").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
