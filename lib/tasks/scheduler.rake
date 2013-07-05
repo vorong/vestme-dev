@@ -5,7 +5,7 @@ task :daily_report => :environment do
 end
 
 task :frequent_report => :environment do
-	UserMailer.daily_report_email("gary@voronel.com").deliver
+	UserMailer.daily_report_email("forsale98101@gmail.com").deliver
 end
 
 task :user_report => :environment do

@@ -13,5 +13,5 @@ User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.firs
 User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
 
 
-User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt = 201305").each do |user| UserMailer.first_monthly_email(user.email).deliver end
-User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt < 201305").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt = 201306").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt < 201306").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
