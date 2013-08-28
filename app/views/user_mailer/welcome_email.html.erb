@@ -7,10 +7,10 @@
   <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
     <div id="main">
       <div>
-        <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Welcome to MSFT401k!</h3>
+        <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Welcome to Optimal 401k!</h3>
         <p>You're smart!  You've taken the first step toward higher returns and reduced volatility for your 401k.</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Get Started Now</h3>
-        <p>Update your 401k account now using our <a href="http://www.msft401k.com/stepbystep">step-by-step instructions</a> and this month's allocations.<sup>*</sup>  You should complete this rebalance by <%= Date::MONTHNAMES[current_time.month] + " " + Time.days_in_month(current_time.month).to_s %>.  In the future, we'll send you new allocations on the 1st of every month.  Your next rebalance notification will be on <%= Date::MONTHNAMES[(current_time.month + 2) % 12] %> 1.</p>
+        <p>Update your 401k account now using our <a href="http://www.optimal401k.com/stepbystep">step-by-step instructions</a> and this month's allocations.<sup>*</sup>  You should complete this rebalance by <%= Date::MONTHNAMES[current_time.month] + " " + Time.days_in_month(current_time.month).to_s %>.  In the future, we'll send you new allocations on the 1st of every month.  Your next rebalance notification will be on <%= Date::MONTHNAMES[(current_time.month + 2) % 12] %> 1.</p>
 
         <%= render 'layouts/allocations' %>
 

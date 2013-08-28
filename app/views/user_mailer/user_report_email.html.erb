@@ -12,7 +12,7 @@
     			<td style="border: 1px solid black; padding: 3px;">created_at</td>
     			<td style="border: 1px solid black; padding: 3px;">updated_at</td>
     		</tr>
-    		<% User.find(:all, :order => "created_at").each do |user| %>
+    		<% User.find(:all, :order => "created_at DESC").each do |user| %>
     		<tr>
     	 		<td style="border: 1px solid black; padding: 3px;"><%= user.id.to_s %></td>
     	 		<td style="border: 1px solid black; padding: 3px;"><%= user.email.to_s %></td>
