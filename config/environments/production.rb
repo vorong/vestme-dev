@@ -4,8 +4,8 @@ Gvodev::Application.configure do
   config.action_mailer.smtp_settings = {
   :address              => "smtp.1and1.com",
   :port                 => 587,
-  :domain               => 'msft401k.com',
-  :user_name            => 'team@msft401k.com',
+  :domain               => 'optimal401k.com',
+  :user_name            => 'team@optimal401k.com',
   :password             => 'h4x0rPW!',
   :authentication       => 'login',
   :enable_starttls_auto => true  }
