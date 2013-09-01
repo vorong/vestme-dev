@@ -7,6 +7,8 @@
   <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
     <div id="main">
       <div>
+        <h3>MSFT401k is now Optimal 401k!</h3>
+        <p>Thank you for using MSFT401k!  We have a new name: Optimal 401k.  From now on, you can find us on <a href="http://www.optimal401k.com/">http://www.optimal401k.com/, and you can drop us a line at <a href="mailto:team@optimal401k.com">team@optimal401k.com</a>.</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;"><%= Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s %> Rebalance</h3>
         <p>Thanks again for signing up!  If you've already updated your allocations according to the welcome email you received in <%= Date::MONTHNAMES[(current_time.month - 1) % 12] %>, you're all set for this month.<sup>*</sup>  Your next rebalance will be on <%= Date::MONTHNAMES[(current_time.month + 1) % 12] %> 1.</p>
         <p style="font-style: italic; font-size: 70%;">* If you didn't get a chance to update your allocations in <%= Date::MONTHNAMES[(current_time.month - 1) % 12] %>, you can <a href="<%= 'http://www.optimal401k.com/users/resend?email=' + @email %>">rebalance to the <%= Date::MONTHNAMES[(current_time.month)] %> allocations</a> now.</p>

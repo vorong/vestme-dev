@@ -3,6 +3,7 @@ User.all.each do |user| UserMailer.custom_note_email(user.email).deliver end
 
 #send to all dev users
 User.where("STATUS = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+User.where("email = 'forsale98101@gmail.com'").each do |user| UserMailer.first_monthly_email(user.email).deliver end
 User.all.each do |user| UserMailer.first_monthly_email(user.email).deliver end
 
 #output all emails
