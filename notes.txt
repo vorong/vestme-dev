@@ -3,7 +3,7 @@ User.all.each do |user| UserMailer.custom_note_email(user.email).deliver end
 
 #send to all dev users
 User.where("STATUS = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
-User.where("email = 'forsale98101@gmail.com'").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+
 User.all.each do |user| UserMailer.first_monthly_email(user.email).deliver end
 
 #output all emails
@@ -16,3 +16,10 @@ User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.regu
 
 User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt = 201311").each do |user| UserMailer.first_monthly_email(user.email).deliver end
 User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt < 201311").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+
+
+# for testing
+User.where("email = 'gary@voronel.com'").each do |user| UserMailer.welcome_email(user.email).deliver end
+User.where("email = 'gary@voronel.com'").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+User.where("email = 'gary@voronel.com'").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+User.where("email = 'gary@voronel.com'").each do |user| UserMailer.variable_email(user.email, "Test Mail", "Hi.").deliver end

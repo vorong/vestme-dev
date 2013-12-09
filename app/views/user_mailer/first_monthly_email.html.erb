@@ -8,7 +8,7 @@
     <div id="main">
       <div>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;"><%= Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s %> Rebalance</h3>
-        <p>Thanks again for signing up!  If you've already updated your allocations according to the welcome email you received in <%= (last_month = (current_time.month - 1) % 12) == 0 ? Date::MONTHNAMES[12] : Date::MONTHNAMES[last_month] %>, you're all set for this month.<sup>*</sup>  Your next rebalance will be on <%= (in_one_month = (current_time.month + 1) % 12) == 0 ? Date::MONTHNAMES[12] : Date::MONTHNAMES[in_one_month] %> 1.</p>
+        <p>Thanks again for signing up!  You're all set for this month &mdash; nothing to do for now.  Your next rebalance will be on <%= (in_one_month = (current_time.month + 1) % 12) == 0 ? Date::MONTHNAMES[12] : Date::MONTHNAMES[in_one_month] %> 1.</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Questions?</h3>
         <p>Check out the <a href="http://www.optimal401k.com/faq">FAQ</a> or drop us a line: <a href="mailto:team@optimal401k.com">team@optimal401k.com</a>.</p>
 
