@@ -84,10 +84,39 @@ class AllocationsController < ApplicationController
   end
 
   def send_test_emails
-    User.where("email = 'garyvo@microsoft.com'").each do |user| UserMailer.variable_email(user.email, "Test Emails Started", "").deliver end
-    User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
-    User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
-    User.where("email = 'garyvo@microsoft.com'").each do |user| UserMailer.variable_email(user.email, "Test Emails Complete", "").deliver end
-    redirect_to allocations_url, notice: "Emails sent."
+    Thread.new do
+      from = "The Optimal 401k Team <team@optimal401k.com>"
+      to = "gary@voronel.com, joeollis@gmail.com, thebasque@gmail.com"
+      $email_summary = ""
+      ActionMailer::Base.mail(:from => from, :to => to, :subject => "Test Emails Started").deliver
+      $email_summary += "First Monthly Email Sent To:\r\n"
+      User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+      $email_summary += "\r\nRegular Monthly Email Sent To:\r\n"
+      User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+      ActionMailer::Base.mail(:from => from, :to => to, :subject => "Test Emails Completed", :body => $email_summary).deliver
+      $email_summary = ""
+    end
+  end
+
+  def send_real_emails
+    current_time = Time.now.change(usec: 0).in_time_zone('America/Los_Angeles')
+    if (current_time.month != 1)
+      wmpt = (current_time.year * 100 + (current_time.month - 1))
+    else
+      wmpt = ((current_time.year - 1) * 100 + 12)
+    end
+
+    Thread.new do
+      from = "The Optimal 401k Team <team@optimal401k.com>"
+      to = "gary@voronel.com, joeollis@gmail.com, thebasque@gmail.com"
+      $email_summary = ""
+      ActionMailer::Base.mail(:from => from, :to => to, :subject => "Real Emails Started").deliver
+      $email_summary += "First Monthly Email Sent To:\r\n"
+      User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt = " + wmpt.to_s).each do |user| UserMailer.first_monthly_email(user.email).deliver end
+      $email_summary += "\r\nRegular Monthly Email Sent To:\r\n"
+      User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt < " + wmpt.to_s).each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+      ActionMailer::Base.mail(:from => from, :to => to, :subject => "Real Emails Completed", :body => $email_summary).deliver
+      $email_summary = ""
+    end
   end
 end

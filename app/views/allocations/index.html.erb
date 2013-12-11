@@ -1,3 +1,12 @@
+<%
+current_time = Time.now.change(usec: 0).in_time_zone('America/Los_Angeles')
+if (current_time.month != 1)
+  wmpt = (current_time.year * 100 + (current_time.month - 1))
+else
+  wmpt = ((current_time.year - 1) * 100 + 12)
+end
+%>
+
 <h1>Allocations</h1>
 
 <table border="1" cellspacing="0" cellpadding="20">
@@ -12,7 +21,16 @@
 
 <br />
 <h1>Send Emails</h1>
-<%= link_to "Send Test Emails", send_test_emails_allocations_path, :remote => true, :onclick => "alert('Test Emails Started!')" %>
+<p><%= link_to "Send Test Emails", send_test_emails_allocations_path, :remote => true, :style => "background-color: #FFFFBB; border: 1px solid black; padding: 10px 20px;", :onclick => "alert('Test emails started!')" %>
+<%= link_to "Send Real Emails", send_real_emails_allocations_path, :remote => true, :style => "background-color: #FFFFBB; border: 1px solid black; padding: 10px 20px;", :onclick => "$('#real_emails_link').toggle(); alert('Real emails started!  Do NOT click this again!!!');", :id => "real_emails_link", :hidden => true %></p>
+<p><a href="#" onclick="$('#real_emails_link').toggle();">Show/Hide "Send Real Emails" Link</a></p>
+
+<br />
+<h1>Debug Information</h1>
+<p>
+Current Time: <%= current_time %><br />
+WMPT: <%= wmpt %><br />
+</p>
 
 <style>
 body {

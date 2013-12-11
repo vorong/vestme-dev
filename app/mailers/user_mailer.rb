@@ -21,6 +21,7 @@ class UserMailer < ActionMailer::Base
     month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "Optimal 401k - " + month_year + " Rebalance")
     puts "Finished sending first monthly mail to " + email
+    $email_summary += email + "\r\n"
   end
 
   def regular_monthly_email(email)
@@ -31,6 +32,7 @@ class UserMailer < ActionMailer::Base
     month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
     mail(:to => email, :subject => "Optimal 401k - " + month_year + " Rebalance")
     puts "Finished sending regular monthly mail to " + email
+    $email_summary += email + "\r\n"
   end
 
   def custom_note_email(email)
