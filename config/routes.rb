@@ -1,5 +1,8 @@
 Gvodev::Application.routes.draw do
-  resources :allocations
+  resources :allocations do
+    collection { get :send_test_emails }
+  end
+
 
   resources :users
 

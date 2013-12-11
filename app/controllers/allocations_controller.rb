@@ -82,4 +82,12 @@ class AllocationsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def send_test_emails
+    User.where("email = 'garyvo@microsoft.com'").each do |user| UserMailer.variable_email(user.email, "Test Emails Started", "").deliver end
+    User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.first_monthly_email(user.email).deliver end
+    User.order("welcomed_at asc").where("status = 4").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+    User.where("email = 'garyvo@microsoft.com'").each do |user| UserMailer.variable_email(user.email, "Test Emails Complete", "").deliver end
+    redirect_to allocations_url, notice: "Emails sent."
+  end
 end
