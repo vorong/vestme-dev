@@ -7,17 +7,28 @@ else
 end
 %>
 
-<h1>Allocations</h1>
+<h1>Allocations Table</h1>
 
 <table border="1" cellspacing="0" cellpadding="20">
-<% @allocations.each do |allocation| %>
+<% Allocation.order('"group" asc').each do |allocation| %>
   <tr>
     <td><%= allocation.group %></td>
-    <td><%= allocation.values %></td>
-    <td><% if allocation.group == "values" %><%= link_to 'Edit', edit_allocation_path(allocation) %><% end %></td>
+    <td style="font-size: 90%"><%= allocation.values %></td>
+    <td><%= link_to 'Edit', edit_allocation_path(allocation), :id => "edit_" + allocation.group.to_s %></td>
   </tr>
 <% end %>
 </table>
+<p><a href="#" onclick="$('#edit_funds').toggle();">Show/Hide "Edit" Link for Funds</a></p>
+
+<script>
+$('#edit_funds').ready(function() {
+  $('#edit_funds').toggle();
+});
+</script>
+
+<br />
+<h1>What Users Will See in E-Mail</h1>
+<%= render 'layouts/allocations' %>
 
 <br />
 <h1>Send Emails</h1>
