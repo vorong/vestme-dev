@@ -1,4 +1,6 @@
-        <h4 style="margin: 20px 0px 5px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 120%;">Allocations</h4>
+        <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Allocations</h3>
+        <p>We have two strategies: conservative and aggressive.  Choose the one that's right for you!  (To learn more about the difference between the strategies, check out the <a href="http://www.optimal401k.com/faq#learnmore">FAQ</a>.)</p>
+        <h4 style="margin: 20px 0px 5px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 120%;">Allocations for Conservative Strategy</h4>
         <table style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; border: 1px solid black; padding: 0px; border-spacing: 0; border-collapse: collapse;">
           <tr>
             <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 2px 2px 6px; text-align: left;">Fund Name</td>
@@ -7,6 +9,29 @@
           <% row_count = 0 %>
           <% funds = Allocation.where("\"group\" = 'funds'")[0].values.split(",") %>
           <% allocations = Allocation.where("\"group\" = 'values'")[0].values.split(",") %>
+          <% funds.each do |alloc| %>
+          <% if (row_count % 2) == 0 then bg_color = 'D9D9D9' %>
+          <% else bg_color = 'FFFFFF' end %>
+          <tr>
+            <td style="border-top: 1px solid black; padding: 3px 2px 3px 6px; text-align: left; background-color: #<%= bg_color %>;"><%= funds[row_count] %></td>
+            <td style="border-top: 1px solid black; padding: 3px 6px 3px 2px; text-align: right; background-color: #<%= bg_color %>;"><%= number_with_precision(allocations[row_count], precision: 2) %>%</td>
+          </tr>
+          <% row_count = row_count + 1 %>
+          <% end %>
+          <tr>
+            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 2px 2px 6px; text-align: left;">Total</td>
+            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 6px 2px 10px; text-align: right;"><%= number_with_precision(allocations.inject{ |sum,x| sum.to_f + x.to_f }, precision: 2) %>%</td>
+          </tr>
+        </table>
+        <h4 style="margin: 20px 0px 5px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 120%;">Allocations for Aggressive Strategy</h4>
+        <table style="font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; border: 1px solid black; padding: 0px; border-spacing: 0; border-collapse: collapse;">
+          <tr>
+            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 2px 2px 6px; text-align: left;">Fund Name</td>
+            <td style="font-weight: bold; color: white; background-color: black; border: 1px solid black; padding: 3px 6px 2px 10px; text-align: left;">Allocation</td>
+          </tr>
+          <% row_count = 0 %>
+          <% funds = Allocation.where("\"group\" = 'funds'")[0].values.split(",") %>
+          <% allocations = Allocation.where("\"group\" = 'values_agg'")[0].values.split(",") %>
           <% funds.each do |alloc| %>
           <% if (row_count % 2) == 0 then bg_color = 'D9D9D9' %>
           <% else bg_color = 'FFFFFF' end %>
