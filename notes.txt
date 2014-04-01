@@ -22,3 +22,8 @@ User.where("email = 'gary@voronel.com'").each do |user| UserMailer.welcome_email
 User.where("email = 'gary@voronel.com'").each do |user| UserMailer.first_monthly_email(user.email).deliver end
 User.where("email = 'gary@voronel.com'").each do |user| UserMailer.regular_monthly_email(user.email).deliver end
 User.where("email = 'gary@voronel.com'").each do |user| UserMailer.variable_email(user.email, "Test Mail", "Hi.").deliver end
+
+# custom note
+User.order("id desc").where("email = 'gary@voronel.com'").each do |user| UserMailer.custom_note_email(user.email).deliver end
+User.order("id desc").where("status = 4").each do |user| UserMailer.custom_note_email(user.email).deliver end
+User.order("id desc").where("status != 1 and status != 2 and status != 4").each do |user| UserMailer.custom_note_email(user.email).deliver end

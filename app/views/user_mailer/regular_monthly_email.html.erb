@@ -7,12 +7,8 @@
   <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
     <div id="main">
       <div>
-        <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Updated Annual Returns</h3>
-        <p>Since the year has come to a close, we have updated our annual returns on our FAQ.  Check them out here: <a href="http://optimal401k.com/faq#question-16">Updated Annual Returns</a>.</p>
-        <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Announcing the Aggressive Strategy</h3>
-        <p>Over the last few months, we received requests from some users that they want their 401k portfolio to take on more risk.  To accomodate this need, we are releasing a second strategy!  The allocations for the new strategy are listed below and labeled as "Allocations for Aggressive Strategy."</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;"><%= Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s %> Rebalance</h3>
-        <p>Here are this month's allocations.  You should complete this rebalance as soon as you can using our <a href="http://www.optimal401k.com/stepbystep">step-by-step instructions</a>.  Questions? Check out the <a href="http://www.optimal401k.com/faq">FAQ</a> or drop us a line: <a href="mailto:team@optimal401k.com">team@optimal401k.com</a>.</p>
+        <p>Here are this month's allocations.  You should complete this rebalance as soon as you can using our <a href="http://www.optimal401k.com/stepbystep">step-by-step instructions</a>.  If you are switching between the Conservative and Aggressive strategies, we recommend skipping one month to prevent a possible <a href="http://optimal401k.com/faq#question-11">round trip warning</a>.  Questions? Check out the <a href="http://www.optimal401k.com/faq">FAQ</a> or drop us a line: <a href="mailto:team@optimal401k.com">team@optimal401k.com</a>.</p>
 
         <%= render 'layouts/allocations' %>
 

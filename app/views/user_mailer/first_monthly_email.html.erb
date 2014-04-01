@@ -7,8 +7,6 @@
   <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
     <div id="main">
       <div>
-        <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Updated Annual Returns</h3>
-        <p>Since the year has come to a close, we have updated our annual returns on our FAQ.  Check them out here: <a href="http://optimal401k.com/faq#question-16">Updated Annual Returns</a>.</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;"><%= Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s %> Rebalance</h3>
         <p>Thanks again for signing up!  You're all set for this month &mdash; nothing to do for now.  Your next rebalance will be on <%= (in_one_month = (current_time.month + 1) % 12) == 0 ? Date::MONTHNAMES[12] : Date::MONTHNAMES[in_one_month] %> 1.</p>
         <h3 style="margin: 30px 0px -10px 0px; font-family: ProximaNovaSemiBold, 'Helvetica Neue', Arial, sans-serif; font-size: 150%;">Questions?</h3>
