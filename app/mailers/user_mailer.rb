@@ -37,7 +37,8 @@ class UserMailer < ActionMailer::Base
 
   def custom_note_email(email)
     @url  = "http://www.optimal401k.com"
-    mail(:to => email, :subject => "Help us get the word out!")
+    @email = email
+    mail(:to => email, :subject => "Important Update to Optimal 401k")
   end
 
   def daily_report_email(email)

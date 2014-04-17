@@ -5,16 +5,29 @@
   </head>
   <body style="font-family: MetaSerifProBook, 'Lucida Bright', Cambria, Georgia, 'Times New Roman', serif;">
     <div id="main">
-      	<p>Hello Optimal 401k Subscribers!</p>
+      <p>Hello Optimal 401k Subscribers!</p>
 
-		<p>We need your help!  Having just released the aggressive strategy and updating our annual returns, we want to get the word out to as many Microsoft employees as we can.  Here’s you can help:</p>
+      <p>We've received a ton of positive feedback, and we are exiting our free pilot program in the coming months.  Please complete the 30-second survey below to help us determine the right price to charge for the service.</p>
 
-		<p>1. Like us on Facebook: <a href="https://www.facebook.com/optimal401k">https://www.facebook.com/optimal401k</a><br />
-		2. Like our Facebook post announcing the page: <a href="https://www.facebook.com/optimal401k/posts/10102871188342353">https://www.facebook.com/optimal401k/posts/10102871188342353</a><br />
-		3. Tell some friends about us in whatever way you feel comfortable (post to your own blog, send a message to an alias, casual chat with a friend, anything!)</p>
+      <%
+        url_end = "WYRV5TR";
+        user_group = User.find_by_email(@email).group
+        case user_group 
+        when 1
+          url_end = "W9NJ6MD";
+        when 2
+          url_end = "WCQKJVT";
+        when 3
+          url_end = "WCJJS95";
+        when 4
+          url_end = "WCJHP67";
+        end
+      %>
 
-		<p>Thank you for helping us get the word out!!<br />
-		The Optimal 401k Team</p>
+      <p>Link to survey: <a href="https://www.surveymonkey.com/s/<%= url_end %>"></a>https://www.surveymonkey.com/s/<%= url_end %></p>
+
+      <p>Thank you!!<br />
+      The Optimal 401k Team</p>
     </div>
   </body>
 </html>

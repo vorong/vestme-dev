@@ -27,3 +27,7 @@ User.where("email = 'gary@voronel.com'").each do |user| UserMailer.variable_emai
 User.order("id desc").where("email = 'gary@voronel.com'").each do |user| UserMailer.custom_note_email(user.email).deliver end
 User.order("id desc").where("status = 4").each do |user| UserMailer.custom_note_email(user.email).deliver end
 User.order("id desc").where("status != 1 and status != 2 and status != 4").each do |user| UserMailer.custom_note_email(user.email).deliver end
+User.order("id desc").each do |user| UserMailer.custom_note_email(user.email).deliver end
+
+# add random num to group
+User.order("welcomed_at asc").each do |user| user.group = Random.rand(5); user.save; end
