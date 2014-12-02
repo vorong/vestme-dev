@@ -112,9 +112,9 @@ class AllocationsController < ApplicationController
       $email_summary = ""
       ActionMailer::Base.mail(:from => from, :to => to, :subject => "Real Emails Started").deliver
       $email_summary += "First Monthly Email Sent To:\r\n"
-      User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt = " + wmpt.to_s).each do |user| UserMailer.first_monthly_email(user.email).deliver end
+      User.order("welcomed_at asc").where("status != 1 and status != 2 and status != 5 and wmpt = " + wmpt.to_s).each do |user| UserMailer.first_monthly_email(user.email).deliver end
       $email_summary += "\r\nRegular Monthly Email Sent To:\r\n"
-      User.order("welcomed_at asc").where("status != 1 and status != 2 and wmpt < " + wmpt.to_s).each do |user| UserMailer.regular_monthly_email(user.email).deliver end
+      User.order("welcomed_at asc").where("status != 1 and status != 2 and status != 5 and wmpt < " + wmpt.to_s).each do |user| UserMailer.regular_monthly_email(user.email).deliver end
       ActionMailer::Base.mail(:from => from, :to => to, :subject => "Real Emails Completed", :body => $email_summary).deliver
       $email_summary = ""
     end
