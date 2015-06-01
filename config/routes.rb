@@ -13,6 +13,7 @@ Gvodev::Application.routes.draw do
   get "faq" => "home#faq"
   get "unsubscribe" => "home#unsubscribe"
   get "resend" => "home#resend"
+  get "index_old" => "home#index_old"
 
   root :to => "home#index"
 

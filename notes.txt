@@ -31,3 +31,9 @@ User.order("id desc").each do |user| UserMailer.custom_note_email(user.email).de
 
 # add random num to group
 User.order("welcomed_at asc").each do |user| user.group = Random.rand(5); user.save; end
+
+User.order("id desc").where("status = 4").each do |user| UserMailer.custom_note_email(user.email).deliver end
+
+User.where("status=4").each do |user| UserMailer.custom_note_email(user.email).deliver end
+
+User.where("status != 1 and status != 2 and status != 4").each do |user| UserMailer.custom_note_email(user.email).deliver end

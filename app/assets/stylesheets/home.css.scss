@@ -310,3 +310,15 @@ a:hover, a:active {
 #main-terms .hashanchor {
 	position: relative; top: -70px;
 }
+
+.centerBox{
+	width: 550px;
+	height: 175px;
+	background-color: white;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -90px 0 0 -300px;
+	padding: 0px 25px;
+	font-size: 90%;
+}

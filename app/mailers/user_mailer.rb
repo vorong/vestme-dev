@@ -30,7 +30,7 @@ class UserMailer < ActionMailer::Base
     @email = email
     current_time = Time.now.in_time_zone('America/Los_Angeles')
     month_year = Date::MONTHNAMES[current_time.month] + " " + current_time.year.to_s
-    mail(:to => email, :subject => "Optimal 401k - " + month_year + " Rebalance")
+    mail(:to => email, :subject => "Optimal 401k - Parting Words and Final Rebalance (June 2015)")
     puts "Finished sending regular monthly mail to " + email
     $email_summary += email + "\r\n"
   end
