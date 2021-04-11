@@ -45,4 +45,8 @@ Gvodev::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Set eager load per instructions
+  config.eager_load = false
+
 end

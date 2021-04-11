@@ -34,4 +34,7 @@ Gvodev::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
+
+  # Set eager load per instructions
+  config.eager_load = false
 end
