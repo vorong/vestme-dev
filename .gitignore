@@ -21,3 +21,6 @@ doc/
 .project
 .DS_Store
 .idea
+
+# Ignore backup of users as it contains PII.
+users-backup-2015-06-02.csv
